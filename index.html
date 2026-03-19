@@ -34,18 +34,34 @@
         </ul>
     </nav>
 
+    <!-- TOP TEXT MARQUEE -->
+    <section class="text-marquee">
+        <div class="text-marquee-track">
+            <span>DRIVING GROWTH THROUGH STRATEGY, CONTENT AND AI &nbsp;•&nbsp; </span>
+            <span>DRIVING GROWTH THROUGH STRATEGY, CONTENT AND AI &nbsp;•&nbsp; </span>
+            <span>DRIVING GROWTH THROUGH STRATEGY, CONTENT AND AI &nbsp;•&nbsp; </span>
+            <span>DRIVING GROWTH THROUGH STRATEGY, CONTENT AND AI &nbsp;•&nbsp; </span>
+            <span>DRIVING GROWTH THROUGH STRATEGY, CONTENT AND AI &nbsp;•&nbsp; </span>
+        </div>
+    </section>
+
     <!-- DECORATIVE SCRAPS -->
     <div class="scrap organic-pink" style="top:5%; left:-5%"></div>
     <div class="scrap organic-yellow" style="top:20%; right:5%"></div>
     
     <div class="hero-content">
-        <h1 class="hero-title">DRIVING GROWTH THROUGH STRATEGY, CONTENT AND AI</h1>
-        <p class="hero-subtitle">
-            With 7 years of experience, I have produced content for global brands. Developing hundreds of landing pages, coordinating direct marketing campaigns, and creating analytical dashboards. I am an early adopter of AI, using it to build automation tools.
-        </p>
-        <div style="margin-top: 3rem; display: flex; gap: 1.5rem;">
-            <a href="#contact" class="btn btn-primary">CONTACT</a>
-            <a href="Cv.md" class="btn btn-secondary">DOWNLOAD CV</a>
+        <div class="hero-text">
+            <h1 class="hero-title jelly-effect">STRATEGY. CONTENT. AUTOMATION.</h1>
+            <p class="hero-subtitle jelly-effect">
+                With 7 years of experience, I have produced content for global brands. Developing hundreds of landing pages, coordinating direct marketing campaigns, and creating analytical dashboards. I am an early adopter of AI, using it to build automation tools.
+            </p>
+            <div style="margin-top: 3rem; display: flex; gap: 1.5rem;">
+                <a href="#contact" class="btn btn-primary">CONTACT</a>
+                <a href="Cv.md" class="btn btn-secondary">DOWNLOAD CV</a>
+            </div>
+        </div>
+        <div class="hero-image jelly-effect">
+            <img src="portrait.JPG" alt="Ahmed Portrait" />
         </div>
     </div>
 
@@ -268,6 +284,25 @@
 
             document.querySelectorAll('.reveal-hidden').forEach(el => {
                 observer.observe(el);
+            });
+
+            // Jelly effect on mousemove
+            document.addEventListener('mousemove', (e) => {
+                document.querySelectorAll('.jelly-effect').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+                    
+                    // Magnetic pull towards the mouse, clamped so it doesn't fly too far
+                    const distX = e.clientX - centerX;
+                    const distY = e.clientY - centerY;
+                    
+                    const moveX = Math.max(-30, Math.min(30, distX * 0.04));
+                    const moveY = Math.max(-30, Math.min(30, distY * 0.04));
+                    
+                    el.style.setProperty('--jx', `${moveX}px`);
+                    el.style.setProperty('--jy', `${moveY}px`);
+                });
             });
         });
     </script>
