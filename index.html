@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed's Portfolio - Creative Technologist</title>
-    <meta name="description" content="Personal portfolio of Ahmed, showcasing professional projects and skills.">
-    <!-- Fonts from the style sample -->
+    <title>Ahmed - Technical Marketing Lead</title>
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,75 +26,175 @@
     <nav>
         <div class="logo">Ahmed<span>.</span></div>
         <ul class="nav-links">
-            <li><a href="#projects">Work</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="artwork.html">Artwork</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="Cv.md" class="btn btn-nav-download">Download CV</a></li>
         </ul>
-        <div class="cta-button nav-cta">
-            <div class="cta-bg"></div>
-            <div class="cta-shadow"></div>
-            <span class="cta-text">HIRE ME</span>
-        </div>
     </nav>
 
-    <div class="canvas">
-        <!-- Depth Layers (Smudges) -->
-        <div class="smudge smudge-top"></div>
-        <div class="smudge smudge-bottom"></div>
-
-        <!-- MAIN PORTRAIT BASE / HERO -->
-        <div class="portrait-container" id="hero">
-            <div class="portrait-cutout">
-                <div class="portrait-overlay"></div>
-            </div>
-            
-            <div class="role-label primary-label">
-                AI CREATIVE TECHNOLOGIST
-            </div>
-            <div class="role-label secondary-label">
-                STRATEGY • ARTISTRY • EXECUTION
-            </div>
+    <!-- DECORATIVE SCRAPS -->
+    <div class="scrap organic-pink" style="top:5%; left:-5%"></div>
+    <div class="scrap organic-yellow" style="top:20%; right:5%"></div>
+    
+    <div class="hero-content">
+        <h1 class="hero-title">DRIVING GROWTH THROUGH STRATEGY, CONTENT AND AI</h1>
+        <p class="hero-subtitle">
+            With 7 years of experience, I have produced content for global brands. Developing hundreds of landing pages, coordinating direct marketing campaigns, and creating analytical dashboards. I am an early adopter of AI, using it to build automation tools.
+        </p>
+        <div style="margin-top: 3rem; display: flex; gap: 1.5rem;">
+            <a href="#contact" class="btn btn-primary">CONTACT</a>
+            <a href="Cv.md" class="btn btn-secondary">DOWNLOAD CV</a>
         </div>
-
-        <!-- DECORATIVE SCRAPS -->
-        <div class="scrap organic-pink"></div>
-        <div class="scrap organic-yellow"></div>
-        <div class="scrap organic-blue"></div>
-
-        <!-- MARQUEE (Top banner) -->
-        <div class="marquee-strip">
-            <div class="marquee-bg"></div>
-            <span>NEED AHMED TO DISTILL THE DENSE? • I'VE GOT YOU! • CREATIVE TECHNOLOGIST & DEVELOPER • </span>
-        </div>
-
-        <!-- TURQUOISE ORGANIC FLASHING SHAPE -->
-        <div class="flash-organic"></div>
     </div>
 
-    <section id="projects" class="projects-section">
-        <h2 class="section-title">SELECTED WORK</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop');"></div>
-                <div class="project-info">
-                    <h3>Project Alpha</h3>
-                    <p>AI-driven interface design.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop');"></div>
-                <div class="project-info">
-                    <h3>Beta Protocol</h3>
-                    <p>Web3 interactive experience.</p>
-                </div>
-            </div>
+    <!-- LOGO MARQUEE -->
+    <section class="logo-marquee">
+        <div class="logo-track">
+            <img src="logos/AHE logo.png" alt="AHE" />
+            <img src="logos/Evergreen_logo.png" alt="Evergreen" />
+            <img src="logos/Nespresso_logo.png" alt="Nespresso" />
+            <img src="logos/Pringles_2021.png" alt="Pringles" />
+            <img src="logos/Skrewball-Logo.jpg" alt="Skrewball" />
+            <img src="logos/Streets_logo2.png" alt="Streets" />
+            <img src="logos/UFS_logo.png" alt="UFS" />
+            <!-- Duplicate for smooth infinite scroll -->
+            <img src="logos/AHE logo.png" alt="AHE" />
+            <img src="logos/Evergreen_logo.png" alt="Evergreen" />
+            <img src="logos/Nespresso_logo.png" alt="Nespresso" />
+            <img src="logos/Pringles_2021.png" alt="Pringles" />
+            <img src="logos/Skrewball-Logo.jpg" alt="Skrewball" />
+            <img src="logos/Streets_logo2.png" alt="Streets" />
+            <img src="logos/UFS_logo.png" alt="UFS" />
         </div>
     </section>
 
-    <!-- Footer Text -->
+    <!-- HIGHLIGHTS -->
+    <section class="highlights-section">
+        <div class="highlight-card" style="background: var(--paper-turquoise);">
+            <h3>Automation</h3>
+            <p>Using Zapier, Retool, JavaScript, and AI to simplify and automate business processes and analytics.</p>
+        </div>
+        <div class="highlight-card" style="background: var(--paper-pink);">
+            <h3 style="color: white;">150+ Landing Pages</h3>
+            <p style="color: white;">For training, education, and promotions following strict branding guides and stakeholder feedback.</p>
+        </div>
+        <div class="highlight-card" style="background: var(--paper-yellow);">
+            <h3>7+ Years of Content</h3>
+            <p>Across web copy, mobile optimization, social media content, images, infographics, and short-form video.</p>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL PROJECTS -->
+    <section class="projects-section">
+        <h2 class="section-title">PROFESSIONAL PROJECTS</h2>
+        
+        <div class="detailed-project">
+            <h3>Digital Training for Hardware Brands</h3>
+            <p><strong>Project Description:</strong> Manufacturers like PPG and AHE needed a way to train hardware store staff without taking them away from customers for long meetings. I built digital landing pages and an app that allowed staff to learn about products quickly on their phones.</p>
+            
+            <h4>Outcomes</h4>
+            <ul>
+                <li>Staff completed over 8,000 training sessions in Bunnings and independent stores.</li>
+                <li>Manufacturers successfully trained staff on 5 different brands and dozens of products.</li>
+                <li>Replaced long, unmeasured meetings with digital lessons that tracked staff knowledge.</li>
+            </ul>
+
+            <h4>What I Did</h4>
+            <ul>
+                <li>Met with learning teams to understand their training goals and requested new features.</li>
+                <li>Designed landing pages and assets following each brand's style.</li>
+                <li>Built feedback forms and sent weekly reports showing completion rates.</li>
+            </ul>
+        </div>
+
+        <div class="detailed-project">
+            <h3>Direct Marketing for Unilever Food Solutions</h3>
+            <p><strong>Project Description:</strong> Unilever Food Solutions needed a faster way to tell thousands of pubs and clubs about new products and deals. I moved their marketing from paper to digital by managing large email and SMS lists and building mobile sales tools.</p>
+            
+            <h4>Outcomes</h4>
+            <ul>
+                <li>Reached thousands of business owners through targeted email and SMS campaigns.</li>
+                <li>Turned old print designs into modern, easy-to-read mobile pages.</li>
+                <li>Created a digital dashboard so the client could see marketing results every month.</li>
+            </ul>
+
+            <h4>What I Did</h4>
+            <ul>
+                <li>Organized and cleaned large lists of email addresses and phone numbers.</li>
+                <li>Designed landing pages specifically for mobile phone screens.</li>
+                <li>Built visual tools for the sales team and wrote monthly outcome reports.</li>
+            </ul>
+        </div>
+
+        <div class="detailed-project">
+            <h3>Skrewball Whiskey Australian Launch</h3>
+            <p><strong>Project Description:</strong> When Skrewball Whiskey launched in Australia, I hired the promotion staff and gave them the route plans and digital tools they needed to visit the best venues. I also filmed the launch events so the brand could see the success on the ground.</p>
+            
+            <h4>Outcomes</h4>
+            <ul>
+                <li>Successfully introduced the brand to major bars and pubs across Sydney.</li>
+                <li>Met all daily targets for venue visits and product sampling.</li>
+                <li>Provided the client with daily data on how bar owners reacted to the product.</li>
+            </ul>
+
+            <h4>What I Did</h4>
+            <ul>
+                <li>Interviewed and hired the team of brand representatives.</li>
+                <li>Planned the daily routes and collected data using digital tracking forms.</li>
+                <li>Filmed and edited highlight videos of launch events for the brand to use.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- AI PROJECTS -->
+    <section class="projects-section" style="margin-top:0;">
+        <h2 class="section-title" style="background: var(--paper-blue);">KEY AI PROJECTS</h2>
+
+        <div class="detailed-project">
+            <h3>Stakaroo (AI Landing Page Builder)</h3>
+            <p><strong>Project Description:</strong> Creating marketing landing pages usually takes hours of writing and design work. I built Stakaroo to automate this process using AI. A user simply enters their business details, and the app generates professional copy, AI images, and a live webpage in minutes.</p>
+            
+            <h4>Outcomes</h4>
+            <ul>
+                <li>Reduced the time to create a marketing page from 8 hours to under 10 minutes.</li>
+                <li>Built a fully functional platform where users can sign up, pay, and host their pages.</li>
+            </ul>
+
+            <h4>Tech Stack</h4>
+            <p>Frontend: Vue.js 3, HTML, CSS, JavaScript.<br>Backend: Firebase.<br>AI: Gemini API (text) and Google Vertex AI (images).</p>
+        </div>
+
+        <div class="detailed-project">
+            <h3>Suade (Blood Analysis Dashboard)</h3>
+            <p><strong>Project Description:</strong> I built Suade to turn messy medical PDFs into a visual "health dashboard." It extracts medical data from the documents and shows the user their health trends over time, like a Spotify Wrapped for their body.</p>
+            
+            <h4>Outcomes</h4>
+            <ul>
+                <li>Created a prototype that turns messy PDF data into clean, easy-to-read graphs.</li>
+                <li>Built an ephemeral system that processes data privately without storing it long-term.</li>
+            </ul>
+
+            <h4>Tech Stack</h4>
+            <p>Data Extraction: Google Document AI & Cloud Healthcare NLP.<br>Processing: Python.<br>Environment: Google Cloud Platform (GCP).</p>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="form-section">
+        <h2 class="section-title" style="background: var(--paper-yellow); color: var(--charcoal);">GET IN TOUCH</h2>
+        <form class="charcoal-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="company_email" placeholder="Company Email" required>
+            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">SEND MESSAGE</button>
+        </form>
+    </section>
+
     <div class="footer-text">
         Ahmed © 2026. ALL RIGHTS RESERVED.
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
