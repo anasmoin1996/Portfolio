@@ -422,16 +422,55 @@ nav {
     transform: translate(var(--jx, 0px), var(--jy, 0px));
 }
 
-/* Project Cards */
-.project-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 3rem;
-    margin-bottom: 4rem;
+/* Bento Grid Layout for Projects */
+.project-bento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 6rem;
+}
+
+.bento-item {
+    padding: 2.5rem;
     border: 4px solid var(--charcoal);
-    box-shadow: 15px 15px 0 var(--charcoal);
+    box-shadow: 10px 10px 0 var(--charcoal);
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bento-item:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 13px 13px 0 var(--charcoal);
+}
+
+.bento-item.visual-bento {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Make image placeholder fill the bento block */
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0,0,0,0.05),
+        rgba(0,0,0,0.05) 10px,
+        rgba(0,0,0,0) 10px,
+        rgba(0,0,0,0) 20px
+    );
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    opacity: 0.8;
+    text-align: center;
+    padding: 2rem;
 }
 
 /* Shapes */
@@ -447,43 +486,15 @@ nav {
 .color-bg-charcoal { background: var(--charcoal); }
 .color-bg-blue { background: var(--paper-blue); }
 
-.project-card.color-bg-yellow h3.project-title,
-.project-card.color-bg-turquoise h3.project-title {
+.bento-item.color-bg-yellow h3.project-title,
+.bento-item.color-bg-turquoise h3.project-title {
     color: var(--paper-blue);
 }
 
-.project-content {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-visual {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-}
-
-.image-placeholder {
-    width: 100%;
-    min-height: 250px;
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(0,0,0,0.05),
-        rgba(0,0,0,0.05) 10px,
-        rgba(0,0,0,0) 10px,
-        rgba(0,0,0,0) 20px
-    );
-    border: 3px dashed currentColor;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    opacity: 0.8;
-    text-align: center;
-    padding: 2rem;
+@media (max-width: 900px) {
+    .project-bento {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-title {
