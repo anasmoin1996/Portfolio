@@ -113,3 +113,21 @@ What I Did
 - Solved Technical Roadblocks: Fixed complex API errors by matching specific server regions and medical vocabularies.
 - Medical Data Mapping: Linked raw test results to official medical codes so the data could be graphed accurately.
 - Designed for Privacy: Built the app to be "ephemeral," meaning it reads the data, shows the results, and then clears the memory to keep user info safe.
+
+Education & Self-Taught Expertise:
+
+University of Sydney (2015 - 2018)
+Bachelor of Commerce
+
+Major in Marketing
+- Relevant Subjects: Marketing Strategy, Consumer Behavior, Digital Marketing, Market Research.
+- Professional Outcome: Developed the ability to understand market needs, construct compelling brand narratives, and execute targeted campaigns that drive growth and engagement.
+
+Major in Business Information Systems (BIS)
+- Relevant Subjects: Database Management, Business Analytics, Systems Analysis & Design, Agile Project Management.
+- Professional Outcome: Trained to be the critical bridge between the business side and the tech side. Empowered to translate business requirements into technical solutions, streamline processes, and leverage data strategically.
+
+Self-Taught Expertise
+- Development & Web Design: Self-taught in JavaScript (Vue.js), HTML, CSS, and modern web design principles to build interactive and responsive full-stack applications from scratch.
+- Content Production (Adobe Suite): Mastered filming, video editing, and content production using the Adobe Creative Suite to create high-quality, engaging multimedia.
+- AI & Automation: Explored and implemented AI tools (like Google Vertex AI, Gemini, and Document AI) alongside automation platforms (Zapier, Retool) to build innovative solutions.

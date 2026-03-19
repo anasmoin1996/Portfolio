@@ -27,7 +27,7 @@
             <li><a href="education.html">Education</a></li>
             <li><a href="artwork.html">Artwork</a></li>
             <li><a href="index.html#contact">Contact</a></li>
-            <li><a href="Cv.md" class="btn btn-nav-download">Download CV</a></li>
+            <li><a href="cv.html" class="btn btn-nav-download">Download CV</a></li>
         </ul>
     </nav>
 
@@ -38,12 +38,51 @@
     </div>
 
     <section class="projects-section" style="padding-top: 0;">
-        <div class="detailed-project">
-            <h3 style="color: var(--charcoal);">University of Sydney</h3>
-            <p style="font-size: 1.5rem; color: var(--paper-pink); font-family: 'Unbounded', sans-serif;">2015 - 2018</p>
-            <h4 style="background: none; padding:0; border-bottom: 3px solid var(--charcoal);">Bachelor of Commerce (Marketing & Business Information Systems)</h4>
-            
-            <p style="margin-top: 2rem;"><strong>Relevant coursework:</strong> Marketing strategy, consumer behavior, database management, business analytics, digital marketing. Combined strategic marketing foundations with technical systems understanding.</p>
+        <div class="project-bento">
+            <!-- University Degree -->
+            <div class="bento-item color-bg-yellow" style="grid-column: 1 / -1; padding: 3rem;">
+                <h3 class="project-title" style="color: var(--charcoal); margin-bottom: 0.5rem;">University of Sydney</h3>
+                <p style="font-size: 1.5rem; color: var(--paper-pink); font-family: 'Unbounded', sans-serif; margin-bottom: 1rem;">2015 - 2018</p>
+                <h4 style="font-size: 1.8rem; background: none; padding:0; border-bottom: 3px solid var(--charcoal); padding-bottom: 1rem; margin-bottom: 2rem; color: var(--paper-blue); font-family: 'Unbounded', sans-serif;">Bachelor of Commerce</h4>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Marketing Major -->
+                    <div style="background: white; border: 3px solid var(--charcoal); padding: 2rem; box-shadow: 8px 8px 0 var(--charcoal);">
+                        <h5 style="color: var(--paper-pink); font-family: 'Unbounded', sans-serif; font-size: 1.3rem; margin-bottom: 1rem; text-transform: uppercase;">Major in Marketing</h5>
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--charcoal);"><strong>Relevant Subjects:</strong><br>Marketing Strategy, Consumer Behavior, Digital Marketing, Market Research.</p>
+                        <p style="font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0;"><strong>Professional Outcome:</strong><br>Developed the ability to understand market needs, construct compelling brand narratives, and execute targeted campaigns that drive growth and engagement.</p>
+                    </div>
+
+                    <!-- BIS Major -->
+                    <div style="background: white; border: 3px solid var(--charcoal); padding: 2rem; box-shadow: 8px 8px 0 var(--charcoal);">
+                        <h5 style="color: var(--paper-blue); font-family: 'Unbounded', sans-serif; font-size: 1.3rem; margin-bottom: 1rem; text-transform: uppercase;">Major in Business Information Systems (BIS)</h5>
+                        <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--charcoal);"><strong>Relevant Subjects:</strong><br>Database Management, Business Analytics, Systems Analysis & Design, Agile Project Management.</p>
+                        <p style="font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0;"><strong>Professional Outcome:</strong><br>Trained to be the critical bridge between the business side and the tech side. Empowered to translate business requirements into technical solutions, streamline processes, and leverage data strategically.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Self Taught Section -->
+            <div class="bento-item color-bg-charcoal" style="grid-column: 1 / -1; padding: 3rem; margin-top: 1rem;">
+                <h3 class="project-title" style="color: white; margin-bottom: 2rem; border-bottom: 3px solid white; padding-bottom: 1rem;">Self-Taught Expertise</h3>
+                
+                <div class="bullet-list">
+                    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+                        <li style="color: white;">
+                            <strong style="font-family: 'Unbounded', sans-serif; font-size: 1.2rem; color: var(--paper-yellow); display: block; margin-bottom: 0.5rem; margin-top: -0.2rem;">Development & Web Design</strong>
+                            Self-taught in JavaScript (Vue.js), HTML, CSS, and modern web design principles to build interactive and highly responsive full-stack applications from scratch.
+                        </li>
+                        <li style="color: white;">
+                            <strong style="font-family: 'Unbounded', sans-serif; font-size: 1.2rem; color: var(--paper-pink); display: block; margin-bottom: 0.5rem; margin-top: -0.2rem;">Content Production (Adobe Suite)</strong>
+                            Mastered filming, video editing, and content production using the Adobe Creative Suite to create high-quality, engaging multimedia for brands and marketing campaigns.
+                        </li>
+                        <li style="color: white;">
+                            <strong style="font-family: 'Unbounded', sans-serif; font-size: 1.2rem; color: var(--paper-turquoise); display: block; margin-bottom: 0.5rem; margin-top: -0.2rem;">AI & Automation</strong>
+                            Explored and implemented AI tools (Google Vertex AI, Gemini, Document AI) alongside automation platforms (Zapier, Retool) to build innovative solutions out of pure curiosity and necessity.
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
