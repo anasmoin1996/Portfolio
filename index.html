@@ -3,46 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed's Portfolio</title>
+    <title>Ahmed's Portfolio - Creative Technologist</title>
     <meta name="description" content="Personal portfolio of Ahmed, showcasing professional projects and skills.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Fonts from the style sample -->
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="blob"></div>
-    <div id="blob-blur"></div>
+
+    <!-- SVG Filters -->
+    <svg class="filter-container">
+        <defs>
+            <filter id="charcoal-shader">
+                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" />
+                <feComposite operator="in" in2="SourceGraphic" />
+            </filter>
+        </defs>
+    </svg>
+
+    <div class="paper-surface"></div>
+
     <nav>
         <div class="logo">Ahmed<span>.</span></div>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#projects">Work</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="cta-button nav-cta">
+            <div class="cta-bg"></div>
+            <div class="cta-shadow"></div>
+            <span class="cta-text">HIRE ME</span>
+        </div>
     </nav>
 
-    <main>
-        <section class="hero" id="about">
-            <div class="hero-content">
-                <h1 class="glitch-text" data-text="Creative Developer">Creative Developer</h1>
-                <p>Bringing ideas to life through elegant code and stunning visual design. Transforming visions into digital realities.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View Work</a>
-                    <a href="#contact" class="btn secondary">Get in Touch</a>
+    <div class="canvas">
+        <!-- Depth Layers (Smudges) -->
+        <div class="smudge smudge-top"></div>
+        <div class="smudge smudge-bottom"></div>
+
+        <!-- MAIN PORTRAIT BASE / HERO -->
+        <div class="portrait-container" id="hero">
+            <div class="portrait-cutout">
+                <div class="portrait-overlay"></div>
+            </div>
+            
+            <div class="role-label primary-label">
+                AI CREATIVE TECHNOLOGIST
+            </div>
+            <div class="role-label secondary-label">
+                STRATEGY • ARTISTRY • EXECUTION
+            </div>
+        </div>
+
+        <!-- DECORATIVE SCRAPS -->
+        <div class="scrap organic-pink"></div>
+        <div class="scrap organic-yellow"></div>
+        <div class="scrap organic-blue"></div>
+
+        <!-- MARQUEE (Top banner) -->
+        <div class="marquee-strip">
+            <div class="marquee-bg"></div>
+            <span>NEED AHMED TO DISTILL THE DENSE? • I'VE GOT YOU! • CREATIVE TECHNOLOGIST & DEVELOPER • </span>
+        </div>
+
+        <!-- TURQUOISE ORGANIC FLASHING SHAPE -->
+        <div class="flash-organic"></div>
+    </div>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">SELECTED WORK</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="project-info">
+                    <h3>Project Alpha</h3>
+                    <p>AI-driven interface design.</p>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="glass-card">
-                    <div class="card-content">
-                        <h3>Hi, I'm Ahmed</h3>
-                        <p>I build interactive, modern web experiences.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Node.js</span>
-                        </div>
-                    </div>
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="project-info">
+                    <h3>Beta Protocol</h3>
+                    <p>Web3 interactive experience.</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Footer Text -->
+    <div class="footer-text">
+        Ahmed © 2026. ALL RIGHTS RESERVED.
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
