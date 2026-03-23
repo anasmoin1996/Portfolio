@@ -367,6 +367,28 @@ nav {
     gap: 4rem;
 }
 
+.hero-text-wall {
+    position: absolute;
+    inset: -50px;
+    z-index: -1;
+    overflow: hidden;
+    color: var(--charcoal);
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    opacity: 0.15;
+    pointer-events: none;
+    text-transform: uppercase;
+    text-align: justify;
+    word-break: break-all;
+    
+    --mx: 50%;
+    --my: 50%;
+    -webkit-mask-image: radial-gradient(circle 300px at var(--mx) var(--my), black 0%, transparent 100%);
+    mask-image: radial-gradient(circle 300px at var(--mx) var(--my), black 0%, transparent 100%);
+}
+
 .hero-text {
     flex: 1;
     min-width: 300px;
@@ -680,6 +702,24 @@ nav {
     opacity: 0.9;
 }
 
+.metric-detail {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-top: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: normal;
+    text-transform: none;
+}
+
+.metric:hover .metric-detail {
+    margin-top: 0.8rem;
+    opacity: 1;
+    max-height: 150px;
+}
+
 /* Animations */
 .reveal-hidden {
     opacity: 0;
@@ -716,6 +756,64 @@ nav {
     background: var(--paper-pink);
     color: white;
     padding: 0.5rem 1.5rem;
+}
+
+/* Education Page Specifics */
+.subject-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.subject-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 2px solid var(--charcoal);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: bold;
+    box-shadow: 3px 3px 0 var(--charcoal);
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: var(--charcoal);
+}
+
+.subject-tag:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--charcoal);
+}
+
+.subject-tag svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.5;
+}
+
+.expertise-card {
+    background: white;
+    padding: 2.5rem;
+    border: 4px solid var(--charcoal);
+    box-shadow: 10px 10px 0 var(--charcoal);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.expertise-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 14px 14px 0 var(--charcoal);
+}
+
+.expertise-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1.5rem;
+    stroke: currentColor;
 }
 
 /* Page headers */

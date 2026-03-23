@@ -40,48 +40,94 @@
     <section class="projects-section" style="padding-top: 0;">
         <div class="project-bento">
             <!-- University Degree -->
-            <div class="bento-item color-bg-yellow" style="grid-column: 1 / -1; padding: 3rem;">
-                <h3 class="project-title" style="color: var(--charcoal); margin-bottom: 0.5rem;">University of Sydney</h3>
+            <div class="bento-item shape-3 color-bg-yellow" style="grid-column: 1 / -1; padding: 3rem;">
+                <h3 class="project-title" style="color: var(--charcoal); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <svg class="icon" style="width: 40px; height: 40px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    University of Sydney
+                </h3>
                 <p style="font-size: 1.5rem; color: var(--paper-pink); font-family: 'Unbounded', sans-serif; margin-bottom: 1rem;">2015 - 2018</p>
                 <h4 style="font-size: 1.8rem; background: none; padding:0; border-bottom: 3px solid var(--charcoal); padding-bottom: 1rem; margin-bottom: 2rem; color: var(--paper-blue); font-family: 'Unbounded', sans-serif;">Bachelor of Commerce</h4>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                     <!-- Marketing Major -->
-                    <div style="background: white; border: 3px solid var(--charcoal); padding: 2rem; box-shadow: 8px 8px 0 var(--charcoal);">
-                        <h5 style="color: var(--paper-pink); font-family: 'Unbounded', sans-serif; font-size: 1.3rem; margin-bottom: 1rem; text-transform: uppercase;">Major in Marketing</h5>
-                        <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--charcoal);"><strong>Relevant Subjects:</strong><br>Marketing Strategy, Consumer Behavior, Digital Marketing, Market Research.</p>
-                        <p style="font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0;"><strong>Professional Outcome:</strong><br>Developed the ability to understand market needs, construct compelling brand narratives, and execute targeted campaigns that drive growth and engagement.</p>
+                    <div class="expertise-card shape-1">
+                        <h5 style="color: var(--paper-pink); font-family: 'Unbounded', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase;">Major in Marketing</h5>
+                        
+                        <p style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0.5rem;"><strong>Relevant Subjects:</strong></p>
+                        <div class="subject-tags">
+                            <span class="subject-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                                Marketing Strategy
+                            </span>
+                            <span class="subject-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                                Consumer Behavior
+                            </span>
+                            <span class="subject-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                                Digital Marketing
+                            </span>
+                            <span class="subject-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                Market Research
+                            </span>
+                        </div>
+                        <p style="font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0;"><strong>Outcome:</strong> Constructed compelling brand narratives and executed targeted campaigns driving growth.</p>
                     </div>
 
                     <!-- BIS Major -->
-                    <div style="background: white; border: 3px solid var(--charcoal); padding: 2rem; box-shadow: 8px 8px 0 var(--charcoal);">
-                        <h5 style="color: var(--paper-blue); font-family: 'Unbounded', sans-serif; font-size: 1.3rem; margin-bottom: 1rem; text-transform: uppercase;">Major in Business Information Systems (BIS)</h5>
-                        <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--charcoal);"><strong>Relevant Subjects:</strong><br>Database Management, Business Analytics, Systems Analysis & Design, Agile Project Management.</p>
-                        <p style="font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0;"><strong>Professional Outcome:</strong><br>Trained to be the critical bridge between the business side and the tech side. Empowered to translate business requirements into technical solutions, streamline processes, and leverage data strategically.</p>
+                    <div class="expertise-card shape-2">
+                        <h5 style="color: var(--paper-blue); font-family: 'Unbounded', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase;">Major in BIS</h5>
+                        
+                        <p style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0.5rem;"><strong>Relevant Subjects:</strong></p>
+                        <div class="subject-tags">
+                            <span class="subject-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                Database Management
+                            </span>
+                            <span class="subject-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                Business Analytics
+                            </span>
+                            <span class="subject-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                                Systems Analysis
+                            </span>
+                            <span class="subject-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Agile PM
+                            </span>
+                        </div>
+                        <p style="font-size: 1.1rem; color: var(--charcoal); margin-bottom: 0;"><strong>Outcome:</strong> Trained to translate business requirements into tech solutions, leveraging data strategically.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Self Taught Section -->
-            <div class="bento-item color-bg-charcoal" style="grid-column: 1 / -1; padding: 3rem; margin-top: 1rem;">
-                <h3 class="project-title" style="color: white; margin-bottom: 2rem; border-bottom: 3px solid white; padding-bottom: 1rem;">Self-Taught Expertise</h3>
-                
-                <div class="bullet-list">
-                    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
-                        <li style="color: white;">
-                            <strong style="font-family: 'Unbounded', sans-serif; font-size: 1.2rem; color: var(--paper-yellow); display: block; margin-bottom: 0.5rem; margin-top: -0.2rem;">Development & Web Design</strong>
-                            Self-taught in JavaScript (Vue.js), HTML, CSS, and modern web design principles to build interactive and highly responsive full-stack applications from scratch.
-                        </li>
-                        <li style="color: white;">
-                            <strong style="font-family: 'Unbounded', sans-serif; font-size: 1.2rem; color: var(--paper-pink); display: block; margin-bottom: 0.5rem; margin-top: -0.2rem;">Content Production (Adobe Suite)</strong>
-                            Mastered filming, video editing, and content production using the Adobe Creative Suite to create high-quality, engaging multimedia for brands and marketing campaigns.
-                        </li>
-                        <li style="color: white;">
-                            <strong style="font-family: 'Unbounded', sans-serif; font-size: 1.2rem; color: var(--paper-turquoise); display: block; margin-bottom: 0.5rem; margin-top: -0.2rem;">AI & Automation</strong>
-                            Explored and implemented AI tools (Google Vertex AI, Gemini, Document AI) alongside automation platforms (Zapier, Retool) to build innovative solutions out of pure curiosity and necessity.
-                        </li>
-                    </ul>
-                </div>
+            <!-- Self Taught Section Header -->
+            <div style="grid-column: 1 / -1; margin-top: 4rem; margin-bottom: -1rem; display: flex; align-items: center; justify-content: center;">
+                <h3 class="hero-title jelly-effect" style="margin: 0; transform: rotate(1deg); font-size: 2.5rem; background: var(--charcoal); color: white; border-color: var(--charcoal); box-shadow: 8px 8px 0 var(--paper-pink);">SELF-TAUGHT EXPERTISE</h3>
+            </div>
+
+            <!-- Self Taught Cards -->
+            <div class="bento-item shape-4 color-bg-turquoise">
+                <svg class="expertise-icon" style="color: var(--paper-blue);" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <h4 style="font-family: 'Unbounded', sans-serif; font-size: 1.4rem; color: var(--charcoal); margin-bottom: 1rem;">Development & Web Design</h4>
+                <p style="color: var(--charcoal); font-size: 1.1rem; line-height: 1.6;">Self-taught in JavaScript (Vue.js), HTML, CSS, and modern web design principles to build interactive and highly responsive full-stack applications from scratch.</p>
+            </div>
+
+            <div class="bento-item shape-1 color-bg-pink">
+                <svg class="expertise-icon" style="color: white;" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                <h4 style="font-family: 'Unbounded', sans-serif; font-size: 1.4rem; color: white; margin-bottom: 1rem;">Content Production</h4>
+                <p style="color: white; font-size: 1.1rem; line-height: 1.6;">Mastered filming, video editing, and content production using the Adobe Creative Suite to create high-quality, engaging multimedia for brands and marketing campaigns.</p>
+            </div>
+
+            <div class="bento-item shape-2 color-bg-blue" style="grid-column: 1 / -1;">
+                <svg class="expertise-icon" style="color: var(--paper-yellow);" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <h4 style="font-family: 'Unbounded', sans-serif; font-size: 1.4rem; color: white; margin-bottom: 1rem;">AI & Automation</h4>
+                <p style="color: white; font-size: 1.1rem; line-height: 1.6; max-width: 800px;">Explored and implemented AI tools (Google Vertex AI, Gemini, Document AI) alongside automation platforms (Zapier, Retool) to build innovative solutions out of pure curiosity and necessity.</p>
             </div>
         </div>
     </section>
