@@ -183,7 +183,8 @@ nav {
 .text-marquee-track {
     display: flex;
     white-space: nowrap;
-    animation: scroll-text 15s linear infinite;
+    width: max-content;
+    animation: scroll-text 40s linear infinite;
     font-family: 'Unbounded', sans-serif;
     font-weight: 900;
     font-size: 1.5rem;
@@ -262,18 +263,17 @@ nav {
     align-items: center;
 }
 
-.logo-track img {
-    height: 80px;
-    width: auto;
-    max-width: 250px;
-    object-fit: contain;
+.logo-track span {
+    font-size: 2rem;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
     margin: 0 50px;
-    filter: brightness(0) invert(1);
+    color: white;
     opacity: 0.7;
     transition: opacity 0.3s;
 }
 
-.logo-track img:hover {
+.logo-track span:hover {
     opacity: 1;
 }
 
@@ -477,7 +477,27 @@ nav {
 
 .bento-item.visual-bento {
     padding: 0;
-    overflow: hidden;
+    overflow: hidden; /* We'll override this inline for parents that need to pop out */
+}
+
+/* Project Gallery & Hover Expand Effect */
+.project-gallery {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.project-img {
+    width: 100%;
+    max-width: 45%;
+    object-fit: cover;
+    border-radius: 10px;
+    /* Optional: keep charcoal border for consistency or remove if needed */
 }
 
 /* Make image placeholder fill the bento block */
