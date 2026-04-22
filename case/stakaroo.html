@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 04 — Stakaroo | Anas Ahammed</title>
+    <meta name="description" content="Building an AI SaaS platform solo without a development background — and why most vibe-coded projects fail.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="case-study-page">
+
+    <header class="site-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">Anas Ahammed</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html#case-studies">Work</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../cv.html" class="nav-cv">CV ↓</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-hero">
+            <div class="container">
+                <a class="case-hero__back" href="../index.html#case-studies">← Back to work</a>
+                <p class="case-hero__tag">04 — SaaS platform</p>
+                <h1 class="case-hero__headline">
+                    Building an AI SaaS platform solo without a development background — and why most vibe-coded projects fail
+                </h1>
+                <p class="case-hero__oneliner">
+                    Self-service AI landing page platform shipped in months without formal dev background.
+                </p>
+
+                <div class="case-stats">
+                    <div class="case-stat-item">
+                        <span class="case-stat-item__value">90%</span>
+                        <span class="case-stat-item__label">Production time cut</span>
+                    </div>
+                    <div class="case-stat-item">
+                        <span class="case-stat-item__value">1</span>
+                        <span class="case-stat-item__label">Developer (me)</span>
+                    </div>
+                    <div class="case-stat-item">
+                        <span class="case-stat-item__value">$0</span>
+                        <span class="case-stat-item__label">Outsourced budget</span>
+                    </div>
+                    <div class="case-stat-item">
+                        <span class="case-stat-item__value">Full</span>
+                        <span class="case-stat-item__label">Stack shipped</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-body">
+            <div class="case-body__inner">
+                <nav class="case-labels" aria-label="Case study sections">
+                    <span class="case-label-item">The context</span>
+                    <span class="case-label-item">The problem</span>
+                    <span class="case-label-item">What I did</span>
+                    <span class="case-label-item">The result</span>
+                    <span class="case-label-item">What I learned</span>
+                </nav>
+
+                <div class="case-sections">
+
+                    <div class="case-section reveal">
+                        <h2 class="case-section__heading">The context</h2>
+                        <div class="case-section__body">
+                            <p>Stakaroo was the last major project I built at Pitchpocket before leaving. The business made bespoke marketing landing pages for clients by hand — copy, design, build — and it was impossible to scale. One designer-developer pair could produce about two pages a day. With over a thousand users on our apps and enterprise clients queuing for campaign assets, that pipeline was the bottleneck of the entire business. The only way out was to turn the production process into a product — a self-service platform where a small business could generate and publish a professional landing page in minutes, without needing a designer or a developer.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-section reveal">
+                        <h2 class="case-section__heading">The problem — including the personal one</h2>
+                        <div class="case-section__body">
+                            <p>I'm not a trained developer. I have a business degree. I'd built things before — a mobile app MVP years earlier by watching YouTube tutorials — but this was a full-stack SaaS with AI integration, multi-tenancy, authentication, Stripe payments, and hosted landing pages. In 2025 that would have been a hundreds-of-thousands-of-dollars project at an agency. We didn't have that budget and weren't going to get it.</p>
+                            <p>At the same time, AI coding assistants were becoming good enough that a non-developer could, in theory, build something this ambitious. Most people were trying. Most were failing — projects fizzled out halfway through, the agent hallucinated its way into dead ends, codebases became unmaintainable. That failure pattern was the real problem I had to solve, more than any individual technical challenge.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-section reveal">
+                        <h2 class="case-section__heading">What I did</h2>
+                        <div class="case-section__body">
+                            <p>I started by experimenting with the Canvas features in Claude and Gemini, prototyping small pieces of the platform to see how far I could get. When I realised I could iterate effectively, I committed fully — moving from copy-pasting code into VS Code to integrating a coding agent directly into the IDE.</p>
+                            <p>The most important thing I did on this project wasn't write code. It was write a manifesto. Before building anything, I wrote a product requirements document describing what the platform was for, what it must do, and what it must never do. I divided development into phases with explicit goals and tests. Then — and this is the part that mattered — I wrote a system prompt that instructed the AI agent to reference the manifesto before every decision. Every new idea had to either align with the manifesto or trigger an explicit manifesto update. Every phase started with the agent proposing a plan for me to approve. Every change included a way for me to test it before moving on.</p>
+                            <p>This is now standard practice in agentic coding — specification documents, plan-first workflows, test-checkpoints. At the time it wasn't. I built it myself because I watched so many other people's projects collapse into chaos and I wanted to finish mine.</p>
+                            <p>The platform shipped: Vue.js 3 frontend with drag-and-drop panel reordering, Firebase backend (Auth, Firestore, Cloud Functions, Hosting, Storage), Gemini API for generated copy, Imagen 3 for generated images, Stripe integration, QR code generation, built-in analytics for landing page view tracking. Users pick their industry, enter a topic, and get a branded landing page in minutes.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-section reveal">
+                        <h2 class="case-section__heading">The result</h2>
+                        <div class="case-section__body">
+                            <p>The platform deployed and went live. The reaction internally was strong — this was a product that would have cost the business hundreds of thousands of dollars to build conventionally, and I'd delivered it solo in a matter of months. After I left, the business didn't maintain or pursue it; they fell back into traditional agency and staffing work because I was the one leading the project. That's a legitimate outcome for them, and I retain the codebase and license. My intention is to rebrand and relaunch it independently — the right timing just hasn't arrived yet.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-section reveal">
+                        <h2 class="case-section__heading">What I learned</h2>
+                        <div class="case-section__body">
+                            <p>The technical skill you need to build something ambitious with AI assistance is real but teachable. The meta-skill — holding the AI agent accountable across the full length of a project — is the thing almost nobody talks about and the thing that separates finished projects from abandoned ones. You need a clear outcome mapped out before you start, a system for checking that every step is still on plan, and a willingness to update your plan explicitly when the work reveals something you didn't anticipate.</p>
+                            <p>The second lesson is about ownership. At the time I was proud of the technical achievement. In hindsight, the more valuable outcome was internalising a working method for AI-assisted building that I've used on every project since — the health clinic dashboard, the franchise marketplace, every freelance build. Stakaroo wasn't just a product. It was the apprenticeship I gave myself.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-section reveal">
+                        <h2 class="case-section__heading">Tools used</h2>
+                        <div class="tools-used">
+                            <span class="tool-tag">Vue.js 3</span>
+                            <span class="tool-tag">Firebase</span>
+                            <span class="tool-tag">Gemini API</span>
+                            <span class="tool-tag">Imagen 3</span>
+                            <span class="tool-tag">Stripe</span>
+                            <span class="tool-tag">Cloud Functions</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <nav class="case-nav" aria-label="Case study navigation">
+            <div class="case-nav__inner">
+                <a href="regional-real-estate.html" class="case-nav__link">
+                    <span class="case-nav__label">← Previous</span>
+                    <span class="case-nav__title">Regional NSW real estate</span>
+                </a>
+                <a href="pitchpocket.html" class="case-nav__link" style="text-align:right;">
+                    <span class="case-nav__label">Next case study →</span>
+                    <span class="case-nav__title">Pitchpocket — 7 years of enterprise work</span>
+                </a>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-name">Anas Ahammed © 2026</span>
+            <ul class="footer-links">
+                <li><a href="mailto:anasmoin@gmail.com">Email</a></li>
+                <li><a href="../cv.html">CV</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const toggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        toggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
+</body>
+</html>

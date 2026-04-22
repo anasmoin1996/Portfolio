@@ -4,553 +4,588 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anas Ahammed - Technical Marketing Lead</title>
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <title>Anas Ahammed — AI Adoption Consultant, Sydney</title>
+    <meta name="description" content="I embed with SMB and mid-market teams to find where AI creates real leverage, then build the tools and internal capability that make adoption stick.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific tweaks */
+        .site-nav { position: sticky; }
+    </style>
 </head>
 
 <body>
 
-    <!-- SVG Filters -->
-    <svg class="filter-container">
-        <defs>
-            <filter id="charcoal-shader">
-                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" />
-                <feComposite operator="in" in2="SourceGraphic" />
-            </filter>
-        </defs>
-    </svg>
+    <!-- ======================================================
+         NAVIGATION
+         ====================================================== -->
 
-    <div class="paper-surface"></div>
-
-    <nav>
-        <div class="logo">Anas Ahammed<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="artwork.html">Artwork</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="cv.html" class="btn btn-nav-download">Download CV</a></li>
-        </ul>
-    </nav>
-
-    <!-- TOP TEXT MARQUEE -->
-    <section class="text-marquee">
-        <div class="text-marquee-track">
-            <span>Creating Web Sites, Designing Presentations &nbsp;•&nbsp; </span>
-            <span>Building AI Powered Platforms, Vibe Coding &nbsp;•&nbsp; </span>
-            <span>Email Marketing, SMS Marketing, Analytics & Dashboards &nbsp;•&nbsp; </span>
-            <span>Sales Enablement, Content Marketing, Brand Building &nbsp;•&nbsp; </span>
-            <span>Product Development, Project Management, Account Management &nbsp;•&nbsp; </span>
-            <!-- Duplicate for infinite scroll -->
-            <span>Creating Web Sites, Designing Presentations &nbsp;•&nbsp; </span>
-            <span>Building AI Powered Platforms, Vibe Coding &nbsp;•&nbsp; </span>
-            <span>Email Marketing, SMS Marketing, Analytics & Dashboards &nbsp;•&nbsp; </span>
-            <span>Sales Enablement, Content Marketing, Brand Building &nbsp;•&nbsp; </span>
-            <span>Product Development, Project Management, Account Management &nbsp;•&nbsp; </span>
+    <header class="site-nav" role="banner">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Anas Ahammed</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#case-studies">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="cv.html" class="nav-cv">CV ↓</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </section>
+    </header>
 
-    <!-- DECORATIVE SCRAPS -->
-    <div class="scrap organic-pink" style="top:5%; left:-5%"></div>
-    <div class="scrap organic-yellow" style="top:20%; right:5%"></div>
+    <main>
 
-    <div class="hero-content" id="heroContent">
-        <div class="hero-text-wall" id="heroTextWall"></div>
-        <div class="hero-text">
-            <h1 class="hero-title jelly-effect">Great ideas and the skills to make them happen</h1>
-            <p class="hero-subtitle jelly-effect">
-                I'm a problem solver that's not just an ideas guy, I have the drive and the skill-set to be hands on.
-                Build app prototypes, web sites and presentations
-                combined with the experience and training to develop a consistent brand identity and
-                communicating the core value to the customer.
-            </p>
-            <div style="margin-top: 3rem; display: flex; gap: 1.5rem;">
-                <a href="#contact" class="btn btn-primary">CONTACT</a>
-                <a href="cv.html" class="btn btn-secondary">DOWNLOAD CV</a>
-            </div>
-        </div>
-        <div class="hero-image jelly-effect">
-            <img src="portrait.JPG" alt="Ahmed Portrait" />
-        </div>
-    </div>
+        <!-- ====================================================
+             HERO
+             ==================================================== -->
 
-    <!-- LOGO MARQUEE -->
-    <section class="logo-marquee">
-        <div class="logo-track">
-            <span>Australian Homeware Enterprises</span>
-            <span>Evergreen Garden Care</span>
-            <span>Nespresso</span>
-            <span>Pringles</span>
-            <span>Skrewball Whiskey</span>
-            <span>Streets Ice Cream</span>
-            <span>Unilever Food Solutions</span>
-            <span>PPG Paints</span>
-            <span>Rentokil Initial</span>
-            <!-- Duplicate for smooth infinite scroll -->
-            <span>Australian Homeware Enterprises</span>
-            <span>Evergreen Garden Care</span>
-            <span>Nespresso</span>
-            <span>Pringles</span>
-            <span>Skrewball Whiskey</span>
-            <span>Streets Ice Cream</span>
-            <span>Unilever Food Solutions</span>
-            <span>PPG Paints</span>
-            <span>Rentokil Initial</span>
-        </div>
-    </section>
-
-    <!-- HIGHLIGHTS -->
-    <section class="highlights-section">
-        <div class="highlight-card" style="background: var(--paper-turquoise);">
-            <svg class="icon highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 20h9"></path>
-                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-            </svg>
-            <h3>Concept Development</h3>
-            <p>Thrive in taking abstract ideas and collaborating with teams to develop them into concrete concepts.</p>
-        </div>
-        <div class="highlight-card" style="background: var(--paper-pink); color: white;">
-            <svg class="icon highlight-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="9" y1="21" x2="9" y2="9"></line>
-            </svg>
-            <h3 style="color: white;">Strategic Planning</h3>
-            <p style="color: white;">Breaking down high level visions into structured goals and actionable tasks.</p>
-        </div>
-        <div class="highlight-card" style="background: var(--paper-yellow);">
-            <svg class="icon highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
-            <h3>Rapid Prototyping</h3>
-            <p>Building web pages, presentations and app prototypes quickly to provide a solid scaffolding to bring ideas to life.</p>
-        </div>
-    </section>
-
-    <!-- CORE SKILL STATEMENT -->
-    <section style="padding: 2rem 5%; max-width: 1300px; margin: 0 auto 6rem; position: relative; z-index: 50;">
-        <div style="background: white; border: 4px solid var(--charcoal); box-shadow: 15px 15px 0 var(--paper-blue); padding: 3rem; transform: rotate(1deg);">
-            <p style="font-size: 1.4rem; line-height: 1.8; font-weight: 700; color: var(--charcoal); margin: 0;">
-                "Over the last 7 years I have produced content for global brands. Developing hundreds of landing pages, coordinating direct marketing campaigns, and created analytics dashboards. Automating tasks to save time and intergrating AI to assist in the creative process."
-            </p>
-        </div>
-    </section>
-
-    <!-- PROFESSIONAL PROJECTS -->
-    <section class="projects-section">
-        <h2 class="section-title">PROFESSIONAL PROJECTS</h2>
-
-
-        <div class="project-bento reveal-hidden">
-            <div class="bento-item shape-1 color-bg-pink" style="grid-column: 1 / -1;">
-                <h3 class="project-title">Training Staff Directly In The Aisles at Bunnings</h3>
-                <p class="project-desc"><strong>Project Description:</strong> Manufacturers like PPG and AHE needed a better 
-                    way to train retail staff without taking them away from customers or coordinating long training sessions. Using
-                    landing pages optimised for mobile and an app that allowed staff their reps to conduct 5 minute mico-learning sessions in store across Australia and New Zealand.
-                    Making training conversations measuarable and visible to the brands. Helping them grow product recommendations and sales.
+        <section class="hero" id="home">
+            <div class="container">
+                <p class="hero__eyebrow reveal">AI Adoption Consultant — Sydney</p>
+                <h1 class="hero__headline reveal reveal--delay-1">
+                    I help teams adopt AI that actually sticks.
+                </h1>
+                <p class="hero__sub reveal reveal--delay-2">
+                    Embedded consulting for SMB and mid-market teams. Audit workflows, identify where AI creates real leverage, build the tools and internal capability that make the change hold.
+                </p>
+                <div class="hero__ctas reveal reveal--delay-3">
+                    <a href="#case-studies" class="btn btn--primary">See my work</a>
+                    <a href="#contact" class="btn btn--ghost">Get in touch</a>
+                </div>
+                <p class="hero__caption reveal reveal--delay-4">
+                    Currently working with clients across healthcare, property, and franchise operations in Sydney and regional NSW.
                 </p>
             </div>
+        </section>
 
-            <div class="bento-item shape-3 color-bg-yellow">
-                <div class="bullet-list">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>Outcomes</h4>
-                    <div class="metrics-grid">
-                        <div class="metric"><span class="metric-number">8,000+</span><span class="metric-label">Sessions
-                                Completed</span>
-                            <div class="metric-detail">Training sessions completed across AU & NZ hardware stores.</div>
-                        </div>
-                        <div class="metric"><span class="metric-number">10+</span><span class="metric-label">Products
-                                Trained</span>
-                            <div class="metric-detail">Specific product features & benefits, comparisons and resons to buy.</div>
-                        </div>
-                        <div class="metric"><span class="metric-number">100%</span><span class="metric-label">Visibility</span>
-                            <div class="metric-detail">Real-time tracking of training completion and engagement.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- ====================================================
+             CLIENT STRIP
+             ==================================================== -->
 
-            <div class="bento-item shape-2 color-bg-charcoal visual-bento" style="display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                <div class="project-gallery">
-                    <img src="Project images/Training Staff/Training staff 1.png" alt="Training Staff App 1" class="project-img">
-                    <img src="Project images/Training Staff/Training staff 2.png" alt="Training Staff App 2" class="project-img">
-                </div>
-            </div>
-
-            <div class="bento-item shape-4 color-bg-turquoise" style="grid-column: 1 / -1;">
-                <div class="bullet-list what-i-did-grid">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                        </svg>What I Did</h4>
-                    <ul>
-                        <li>Met with learning teams to understand their training goals to build a schedule and briefing document.</li>
-                        <li>Designed landing pages and assets following each brand's style guide and tone of voice.</li>
-                        <li>Built real time analytics dashboards that gave the brands national visibility of training completion and engagement.</li>
-                    </ul>
-                    <div class="subject-tags" style="margin-top: 2.5rem;">
-                        <span class="subject-tag">Product Management</span>
-                        <span class="subject-tag">UX/UI Design</span>
-                        <span class="subject-tag">Stakeholder Management</span>
-                    </div>
+        <div class="logo-strip" aria-hidden="true">
+            <p class="logo-strip__label">Client experience at</p>
+            <div class="logo-strip__track-wrap">
+                <div class="logo-strip__track">
+                    <span>Nespresso</span>
+                    <span>PPG Paints</span>
+                    <span>Unilever Food Solutions</span>
+                    <span>Australian Homeware Enterprises</span>
+                    <span>Evergreen Garden Care</span>
+                    <span>Pringles</span>
+                    <span>Rentokil Initial</span>
+                    <!-- duplicate for infinite scroll -->
+                    <span>Nespresso</span>
+                    <span>PPG Paints</span>
+                    <span>Unilever Food Solutions</span>
+                    <span>Australian Homeware Enterprises</span>
+                    <span>Evergreen Garden Care</span>
+                    <span>Pringles</span>
+                    <span>Rentokil Initial</span>
                 </div>
             </div>
         </div>
 
-        <div class="project-bento reveal-hidden">
-            <div class="bento-item shape-2 color-bg-yellow" style="grid-column: 1 / -1;">
-                <h3 class="project-title">SMS Marketing for Unilever Food Solutions</h3>
-                <p class="project-desc"><strong>Project Description:</strong> Unilever Food Solutions needed a faster
-                    way to tell thousands of pubs and clubs about new products and promotions. Using their opted-in customer database and mobile optimised 
-                    landing pages we created a system that allowed them to send targeted SMS campaigns to their customers.</p>
-            </div>
+        <!-- ====================================================
+             CASE STUDIES
+             ==================================================== -->
 
-            <div class="bento-item shape-1 color-bg-charcoal visual-bento">
-                <div class="image-placeholder"
-                    style="border: 3px dashed var(--canvas-base); background: repeating-linear-gradient(45deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05) 10px, rgba(0,0,0,0) 10px, rgba(0,0,0,0) 20px);">
-                    <span>IMAGE/VIDEO GOES HERE</span>
+        <section id="case-studies">
+            <div class="container">
+                <p class="section-label reveal">Work</p>
+                <h2 class="section-heading reveal reveal--delay-1">Five engagements. Five different problems.</h2>
+
+                <div class="case-grid">
+
+                    <!-- Case 01 -->
+                    <a class="case-card reveal" href="case/sydney-health-clinic.html">
+                        <div class="case-card__meta">
+                            <span class="case-card__num">01</span>
+                            <span class="case-card__tag">Health &amp; beauty clinic</span>
+                            <span class="case-card__status">Live</span>
+                        </div>
+                        <h3 class="case-card__headline">
+                            Turning a clinical admin task into a branded sales tool — and processing 300+ reports with zero compliance incidents
+                        </h3>
+                        <p class="case-card__summary">
+                            Compliance-grade AI pipeline for blood-test report processing at a Sydney health clinic.
+                        </p>
+                        <div class="case-card__stats">
+                            <div class="case-stat">
+                                <span class="case-stat__value">300+</span>
+                                <span class="case-stat__label">Reports processed</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">~2 hrs</span>
+                                <span class="case-stat__label">Saved per patient</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">0</span>
+                                <span class="case-stat__label">Compliance incidents</span>
+                            </div>
+                        </div>
+                        <span class="case-card__cta">Read case study <span class="case-card__arrow">→</span></span>
+                    </a>
+
+                    <!-- Case 02 -->
+                    <a class="case-card reveal reveal--delay-1" href="case/franchise-network.html">
+                        <div class="case-card__meta">
+                            <span class="case-card__num">02</span>
+                            <span class="case-card__tag">Franchise operations</span>
+                            <span class="case-card__status">Near completion</span>
+                        </div>
+                        <h3 class="case-card__headline">
+                            Recovering $6k/month in lost revenue by replacing a 2-hour manual window with an automated marketplace
+                        </h3>
+                        <p class="case-card__summary">
+                            Email-to-marketplace automation for a 4-franchise maintenance services network.
+                        </p>
+                        <div class="case-card__stats">
+                            <div class="case-stat">
+                                <span class="case-stat__value">$6k/mo</span>
+                                <span class="case-stat__label">Revenue recovery target</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">4 wk</span>
+                                <span class="case-stat__label">Build timeline</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">4</span>
+                                <span class="case-stat__label">Franchises onboarding</span>
+                            </div>
+                        </div>
+                        <span class="case-card__cta">Read case study <span class="case-card__arrow">→</span></span>
+                    </a>
+
+                    <!-- Case 03 -->
+                    <a class="case-card reveal" href="case/regional-real-estate.html">
+                        <div class="case-card__meta">
+                            <span class="case-card__num">03</span>
+                            <span class="case-card__tag">Real estate</span>
+                            <span class="case-card__status">Delivered</span>
+                        </div>
+                        <h3 class="case-card__headline">
+                            From 'hire a developer' to AI-assisted marketing — without building anything in AI
+                        </h3>
+                        <p class="case-card__summary">
+                            Strategy and coaching engagement with a 25-year-old regional NSW real estate agency.
+                        </p>
+                        <div class="case-card__stats">
+                            <div class="case-stat">
+                                <span class="case-stat__value">25 yr</span>
+                                <span class="case-stat__label">In business</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">2–3</span>
+                                <span class="case-stat__label">Working sessions</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">$0</span>
+                                <span class="case-stat__label">Dev tools spend</span>
+                            </div>
+                        </div>
+                        <span class="case-card__cta">Read case study <span class="case-card__arrow">→</span></span>
+                    </a>
+
+                    <!-- Case 04 -->
+                    <a class="case-card reveal reveal--delay-1" href="case/stakaroo.html">
+                        <div class="case-card__meta">
+                            <span class="case-card__num">04</span>
+                            <span class="case-card__tag">SaaS platform</span>
+                            <span class="case-card__status">Deployed</span>
+                        </div>
+                        <h3 class="case-card__headline">
+                            Building an AI SaaS platform solo without a development background — and why most vibe-coded projects fail
+                        </h3>
+                        <p class="case-card__summary">
+                            Self-service AI landing page platform shipped solo in months.
+                        </p>
+                        <div class="case-card__stats">
+                            <div class="case-stat">
+                                <span class="case-stat__value">90%</span>
+                                <span class="case-stat__label">Production time cut</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">1</span>
+                                <span class="case-stat__label">Developer (me)</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">Full</span>
+                                <span class="case-stat__label">Stack shipped</span>
+                            </div>
+                        </div>
+                        <span class="case-card__cta">Read case study <span class="case-card__arrow">→</span></span>
+                    </a>
+
+                    <!-- Case 05 -->
+                    <a class="case-card reveal" href="case/pitchpocket.html" style="grid-column: 1 / -1;">
+                        <div class="case-card__meta">
+                            <span class="case-card__num">05</span>
+                            <span class="case-card__tag">Enterprise account management</span>
+                            <span class="case-card__status">7.5 years — concluded Oct 2025</span>
+                        </div>
+                        <h3 class="case-card__headline">
+                            A 7-year run at a micro-SaaS startup managing enterprise clients — from first pitch to 8,000 in-aisle retail training sessions
+                        </h3>
+                        <p class="case-card__summary">
+                            Enterprise relationships with Nespresso, PPG Paints, Unilever Food Solutions, and more.
+                        </p>
+                        <div class="case-card__stats">
+                            <div class="case-stat">
+                                <span class="case-stat__value">8,000+</span>
+                                <span class="case-stat__label">Training sessions</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">500k+</span>
+                                <span class="case-stat__label">Content views</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">7.5 yr</span>
+                                <span class="case-stat__label">Tenure</span>
+                            </div>
+                            <div class="case-stat">
+                                <span class="case-stat__value">6+</span>
+                                <span class="case-stat__label">Enterprise brands</span>
+                            </div>
+                        </div>
+                        <span class="case-card__cta">Read case study <span class="case-card__arrow">→</span></span>
+                    </a>
+
                 </div>
             </div>
+        </section>
 
-            <div class="bento-item shape-4 color-bg-turquoise">
-                <div class="bullet-list">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>Outcomes</h4>
-                    <div class="metrics-grid">
-                        <div class="metric"><span class="metric-number">1,000s</span><span class="metric-label">Venues
-                                Reached</span>
-                            <div class="metric-detail">Pubs and clubs contacted monthly.</div>
+        <!-- ====================================================
+             ABOUT
+             ==================================================== -->
+
+        <section id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-sidebar reveal">
+                        <h2 class="about-sidebar__heading">About</h2>
+                        <p class="about-sidebar__philosophy">"Tools are the easy part. Adoption is the job."</p>
+                    </div>
+                    <div class="about-body">
+                        <p class="reveal">
+                            I'm an AI adoption consultant based in Sydney. I spend most of my time inside client teams — sitting with the people who actually do the work, mapping where time is being lost, and building AI solutions with human-in-the-loop design where trust matters. The goal is always the same: the team can run what I built after I leave.
+                        </p>
+                        <p class="reveal reveal--delay-1">
+                            Before consulting, I spent seven and a half years at a Sydney micro-SaaS startup running enterprise account management for brands including PPG Paints, Nespresso, and Unilever Food Solutions. I built and shipped an AI-driven landing page platform that cut production time by 90%. I have a business degree, not a computer science one — the technical depth came from necessity and curiosity, not a curriculum.
+                        </p>
+                        <p class="reveal reveal--delay-2">
+                            The through-line across everything I do: I care more about whether an engagement leaves a team more capable than when I started, than whether it produced a polished deliverable. Tools are the easy part. Adoption is the job.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             SIDE PROJECTS
+             ==================================================== -->
+
+        <section id="projects">
+            <div class="container">
+                <div class="projects-intro">
+                    <div>
+                        <p class="section-label reveal">Side projects &amp; research</p>
+                        <h2 class="section-heading reveal reveal--delay-1">The laboratory behind the consulting work.</h2>
+                    </div>
+                    <p class="section-intro reveal">
+                        The consulting work is the output. These are the experiments and personal projects where I test working methods, push the tools past their defaults, and build things I'd want to use myself. Most of what ends up in client work was first stress-tested here.
+                    </p>
+                </div>
+
+                <div class="project-cards">
+
+                    <!-- Halcyon01 -->
+                    <div class="project-card reveal">
+                        <span class="project-card__year">2025 · Ongoing</span>
+                        <h3 class="project-card__title">Halcyon01</h3>
+                        <span class="project-card__subtitle">Personal digital twin — voice-native AI meta-agent</span>
+                        <p class="project-card__summary">
+                            A multi-modal AI agent that takes natural language commands, finds the right tool via semantic search, and executes. Built to stress-test how far agent-accountability patterns can scale.
+                        </p>
+                        <span class="project-card__status">Ongoing personal project</span>
+                        <button class="project-card__expand-btn" aria-expanded="false" aria-controls="halcyon-detail">
+                            More detail <span>↓</span>
+                        </button>
+                        <div class="project-card__detail" id="halcyon-detail">
+                            <p>The core architecture is a semantic-search tool router. A local ChromaDB vector database indexes a library of modular Python functions. When I give a command in natural language, the agent performs a semantic search to find the most relevant tool, uses Gemini to extract the specific arguments from my phrasing, and executes. New tools can be added without retraining anything.</p>
+                            <p style="margin-top:0.75rem;">Around that core: a voice-native interface using asyncio for real-time interruptible conversations, vision capabilities via screenshots and Tesseract OCR, a Tkinter GUI control panel, and a Streamlit dashboard. An offline "rumination engine" analyses conversation history and a personal journal to maintain a psyche profile (OCEAN model) that tailors assistance style.</p>
+                            <div class="tech-pills">
+                                <span class="tech-pill">ChromaDB</span>
+                                <span class="tech-pill">Google Gemini</span>
+                                <span class="tech-pill">Python asyncio</span>
+                                <span class="tech-pill">Deepgram</span>
+                                <span class="tech-pill">Tesseract</span>
+                                <span class="tech-pill">Streamlit</span>
+                                <span class="tech-pill">Tkinter</span>
+                            </div>
                         </div>
-                        <div class="metric"><span class="metric-number">12</span><span
-                                class="metric-label">Product Launches</span>
-                            <div class="metric-detail">New product launches supported with SMS campaigns.</div>
+                    </div>
+
+                    <!-- Suade -->
+                    <div class="project-card reveal reveal--delay-1">
+                        <span class="project-card__year">2025 · Prototype</span>
+                        <h3 class="project-card__title">Suade</h3>
+                        <span class="project-card__subtitle">Personal blood analysis dashboard</span>
+                        <p class="project-card__summary">
+                            Built as a personal tool before the clinical version existed — turning messy lab PDFs into a clean visual health dashboard. Spotify Wrapped for your body.
+                        </p>
+                        <span class="project-card__status">Led to commercial engagement (Case 01)</span>
+                        <button class="project-card__expand-btn" aria-expanded="false" aria-controls="suade-detail">
+                            More detail <span>↓</span>
+                        </button>
+                        <div class="project-card__detail" id="suade-detail">
+                            <p>Built for me to track my own blood markers over time — the same messy lab PDFs turned into a clean, scrollable visual dashboard with trends, flagging, and plain-English explanations.</p>
+                            <p style="margin-top:0.75rem;">Two outcomes: the technical pipeline (OCR → Document AI → LLM sense-check → dashboard) was developed and tested before any client saw it. The "Spotify Wrapped for your body" visual idea — the thing that made the clinic owner see this as a sales tool — was proven out here first.</p>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Google Document AI</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">GCP</span>
+                            </div>
                         </div>
-                        <div class="metric"><span class="metric-number">Live</span><span class="metric-label">Promotion
-                                Dashboard</span>
-                            <div class="metric-detail">Real-time engagement on promotion redemptions.</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             CAPABILITIES
+             ==================================================== -->
+
+        <section id="capabilities">
+            <div class="container">
+                <p class="section-label reveal">Tools &amp; capabilities</p>
+                <h2 class="section-heading reveal reveal--delay-1">Grouped by what they do, not by logo.</h2>
+                <p class="section-intro reveal reveal--delay-2">The list changes — consulting means matching the right tool to the problem, not maintaining allegiance to a stack.</p>
+
+                <div class="cap-grid">
+                    <div class="cap-card reveal">
+                        <p class="cap-card__name">AI ecosystem</p>
+                        <p class="cap-card__desc">Daily-driver tools for client work and experimentation</p>
+                        <ul class="cap-card__tools">
+                            <li>Claude (Opus / Sonnet / Haiku)</li>
+                            <li>Claude Code — terminal-native coding</li>
+                            <li>Google Gemini, Imagen, Vertex AI</li>
+                            <li>Google Document AI</li>
+                            <li>ChromaDB, Grok, OpenAI API</li>
+                            <li>MCP integrations</li>
+                        </ul>
+                    </div>
+                    <div class="cap-card reveal reveal--delay-1">
+                        <p class="cap-card__name">Consulting</p>
+                        <p class="cap-card__desc">How the work gets delivered</p>
+                        <ul class="cap-card__tools">
+                            <li>AI readiness audits</li>
+                            <li>Process documentation &amp; SOP capture</li>
+                            <li>Workshop facilitation</li>
+                            <li>Change management</li>
+                            <li>Service packaging &amp; pricing</li>
+                            <li>Stakeholder management</li>
+                        </ul>
+                    </div>
+                    <div class="cap-card reveal reveal--delay-2">
+                        <p class="cap-card__name">Build</p>
+                        <p class="cap-card__desc">Full-stack delivery for client engagements</p>
+                        <ul class="cap-card__tools">
+                            <li>Vue.js 3 (Composition API)</li>
+                            <li>Firebase (Auth, Firestore, Functions)</li>
+                            <li>Sharetribe marketplace platform</li>
+                            <li>Postmark inbound email</li>
+                            <li>Stripe payments</li>
+                            <li>Retool, HubSpot, Webflow</li>
+                        </ul>
+                    </div>
+                    <div class="cap-card reveal reveal--delay-3">
+                        <p class="cap-card__name">Data &amp; analytics</p>
+                        <p class="cap-card__desc">Making the system visible</p>
+                        <ul class="cap-card__tools">
+                            <li>Looker Studio dashboards</li>
+                            <li>Google Analytics</li>
+                            <li>Firebase real-time data</li>
+                            <li>Data extraction pipelines</li>
+                            <li>Multi-source reporting integrations</li>
+                        </ul>
+                    </div>
+                    <div class="cap-card reveal reveal--delay-4">
+                        <p class="cap-card__name">Content &amp; design</p>
+                        <p class="cap-card__desc">The craft layer from 7.5 years of enterprise work</p>
+                        <ul class="cap-card__tools">
+                            <li>Adobe Photoshop, Illustrator, InDesign</li>
+                            <li>Adobe Premiere, After Effects</li>
+                            <li>Video production (end-to-end)</li>
+                            <li>Infographic &amp; visual translation</li>
+                            <li>Mobile-first design</li>
+                            <li>Canva, CapCut</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             EXPERIENCE
+             ==================================================== -->
+
+        <section id="experience">
+            <div class="container">
+                <div class="exp-grid">
+                    <div>
+                        <p class="section-label reveal">Experience</p>
+                        <h2 class="section-heading reveal reveal--delay-1">Chronological view.</h2>
+                    </div>
+                    <div>
+                        <div class="exp-entries">
+
+                            <div class="exp-entry reveal">
+                                <div class="exp-dates">
+                                    <span>Jan 2026</span><br>
+                                    <span>Present</span>
+                                </div>
+                                <div>
+                                    <p class="exp-role">Independent AI Adoption Consultant</p>
+                                    <p class="exp-org">Freelance — Sydney &amp; regional NSW</p>
+                                    <p class="exp-summary">Embedded AI adoption work with SMB clients across healthcare, property, and franchise operations. See <a href="case/sydney-health-clinic.html">case study 01</a>, <a href="case/franchise-network.html">02</a>, and <a href="case/regional-real-estate.html">03</a>.</p>
+                                </div>
+                            </div>
+
+                            <div class="exp-entry reveal reveal--delay-1">
+                                <div class="exp-dates">
+                                    <span>Feb 2018</span><br>
+                                    <span>Oct 2025</span>
+                                </div>
+                                <div>
+                                    <p class="exp-role">Technical Marketing Lead &amp; Multimedia Specialist</p>
+                                    <p class="exp-org">Pitchpocket — Sydney</p>
+                                    <p class="exp-summary">Enterprise account management and technical delivery at a micro-SaaS startup. Clients including PPG Paints, Nespresso, Unilever Food Solutions, Evergreen Garden Care. Shipped the Stakaroo AI platform as final project. See <a href="case/stakaroo.html">case study 04</a> and <a href="case/pitchpocket.html">05</a>.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="education-block reveal">
+                            <p class="education-block__inst">University of Sydney</p>
+                            <p class="education-block__qual">Bachelor of Commerce — Marketing &amp; Business Information Systems, 2015–2018</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="bento-item shape-3 color-bg-pink" style="grid-column: 1 / -1;">
-                <div class="bullet-list what-i-did-grid">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                        </svg>What I Did</h4>
-                    <ul>
-                        <li>Organized and cleaned large lists of email addresses and phone numbers.</li>
-                        <li>Designed landing pages specifically for mobile phone screens.</li>
-                        <li>Created Gif's and videos sharing recipies, how to use products and promotions.</li>
-                        <li>A?/B testing SMS copy and landing pages to improve engagement.</li>
-                    </ul>
-                    <div class="subject-tags" style="margin-top: 2.5rem;">
-                        <span class="subject-tag">Account Management</span>
-                        <span class="subject-tag">Data Management</span>
-                        <span class="subject-tag">Mobile Optimization</span>
+        <!-- ====================================================
+             CONTACT
+             ==================================================== -->
+
+        <section id="contact">
+            <div class="container">
+                <p class="section-label reveal">Contact</p>
+                <h2 class="section-heading reveal reveal--delay-1">Get in touch.</h2>
+
+                <div class="contact-grid">
+                    <div class="reveal reveal--delay-1">
+                        <p class="contact-left__intro">
+                            If you're exploring AI adoption for your team — or hiring for a role where this kind of work would land — I'd love to hear from you. Direct email is the fastest path.
+                        </p>
+                        <a href="mailto:anasmoin@gmail.com" class="contact-email">
+                            anasmoin@gmail.com ↗
+                        </a>
+                        <p class="contact-note">
+                            Based in Newtown, Sydney.<br>
+                            Open to remote and hybrid engagements across Australia.
+                        </p>
                     </div>
+                    <form class="contact-form reveal reveal--delay-2" id="contactForm" action="#" method="POST" novalidate>
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="message">What's on your mind?</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about the challenge you're trying to solve..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn--submit">Send message →</button>
+                    </form>
                 </div>
             </div>
+        </section>
+
+    </main>
+
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-name">Anas Ahammed © 2026</span>
+            <ul class="footer-links">
+                <li><a href="mailto:anasmoin@gmail.com">Email</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
         </div>
-
-        <div class="project-bento reveal-hidden">
-            <div class="bento-item shape-3 color-bg-turquoise" style="grid-column: 1 / -1;">
-                <h3 class="project-title">Skrewball Whiskey Australian Launch</h3>
-                <p class="project-desc"><strong>Project Description:</strong> When Skrewball Whiskey launched in
-                    Australia, I supported hiring the promotion staff and gave them the route plans and digital tools they needed
-                    to visit the best venues. I also filmed the launch events so the brand could see the success on the
-                    ground.</p>
-            </div>
-
-            <div class="bento-item shape-1 color-bg-charcoal">
-                <div class="bullet-list">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>Outcomes</h4>
-                    <div class="metrics-grid" style="grid-template-columns: 1fr;">
-                        <div class="metric"><span class="metric-number">Scale</span><span class="metric-label">Major
-                                Venues Reached</span>
-                            <div class="metric-detail">top-tier bars and clubs nationwide tasted product and promotions landed.</div>
-                        </div>
-                        <div class="metric"><span class="metric-number">100%</span><span class="metric-label">Daily
-                                Targets Met</span>
-                            <div class="metric-detail">Closely montoring KPI's and providing support to the team.</div>
-                        </div>
-                        <div class="metric"><span class="metric-number">Ranging</span><span class="metric-label">In Venues</span>
-                            <div class="metric-detail">Product and POS placement in venues.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bento-item shape-4 color-bg-yellow visual-bento">
-                <div class="image-placeholder">
-                    <span>IMAGE/VIDEO GOES HERE</span>
-                </div>
-            </div>
-
-            <div class="bento-item shape-2 color-bg-pink" style="grid-column: 1 / -1;">
-                <div class="bullet-list what-i-did-grid">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                        </svg>What I Did</h4>
-                    <ul>
-                        <li>Designed and printed t-shirts and promo materials.</li>
-                        <li>Planned the daily routes and collected data using tracking forms and compiled data into a dashboard.</li>
-                        <li>Filmed and edited highlight videos of launch events and tasting reactions for the brand to use.</li>
-                        <li>Created campaign reports addressing KPI's and ROI.</li>
-                    </ul>
-                    <div class="subject-tags" style="margin-top: 2.5rem;">
-                        <span class="subject-tag">Project Management</span>
-                        <span class="subject-tag">Team Leadership</span>
-                        <span class="subject-tag">Content Creation</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI PROJECTS -->
-    <section class="projects-section" style="margin-top:0;">
-        <h2 class="section-title" style="background: var(--paper-blue);">KEY AI PROJECTS</h2>
-
-
-        <div class="project-bento reveal-hidden">
-            <div class="bento-item shape-4 color-bg-charcoal" style="grid-column: 1 / -1;">
-                <h3 class="project-title" style="color: var(--paper-turquoise);">Stakaroo (AI Landing Page Builder)</h3>
-                <p class="project-desc"><strong>Project Description:</strong> Creating marketing landing pages usually
-                    takes hours of writing and design work. I built Stakaroo to automate this process using AI. A user
-                    simply enters their business details, desired goal of the page and the app generates professional copy, AI images, and a live
-                    webpage in minutes. The web page can be shared via QR code od links and tracked for engagement within the platform</p>
-            </div>
-
-            <div class="bento-item shape-1 color-bg-turquoise visual-bento">
-                <div class="image-placeholder">
-                    <span style="color: var(--charcoal);">IMAGE/VIDEO GOES HERE</span>
-                </div>
-            </div>
-
-            <div class="bento-item shape-3 color-bg-pink">
-                <div class="bullet-list">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>Outcomes</h4>
-                    <div class="metrics-grid">
-                        <div class="metric"><span class="metric-number">
-                                < 10m</span><span class="metric-label">Page Creation Time</span>
-                                    <div class="metric-detail">Reduced from hours to minutes using AI.</div>
-                        </div>
-                        <div class="metric"><span class="metric-number">Full</span><span class="metric-label">Hosted
-                                Platform</span>
-                            <div class="metric-detail">End-to-end flow from generation to deployment.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bento-item shape-2 color-bg-yellow" style="grid-column: 1 / -1;">
-                <div class="bullet-list tech-stack-grid">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>Tech Stack</h4>
-                    <ul>
-                        <li>
-                            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                                </svg></div>
-                            <div class="tech-content">
-                                <strong>Frontend</strong>
-                                <span>Vue.js 3, HTML, CSS, JavaScript</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                                </svg></div>
-                            <div class="tech-content">
-                                <strong>Backend</strong>
-                                <span>Firebase</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2a2 2 0 0 1 2-2z"></path>
-                                    <path d="M8 8h8v12h-8z"></path>
-                                    <path d="M2 12h6"></path>
-                                    <path d="M16 12h6"></path>
-                                    <path d="M8 20v2"></path>
-                                    <path d="M16 20v2"></path>
-                                </svg></div>
-                            <div class="tech-content">
-                                <strong>AI</strong>
-                                <span>Gemini API (text) & Google Vertex AI (images)</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-bento reveal-hidden">
-            <div class="bento-item shape-1 color-bg-blue" style="grid-column: 1 / -1;">
-                <h3 class="project-title" style="color: var(--paper-yellow);">Suade (Blood Analysis Dashboard)</h3>
-                <p class="project-desc"><strong>Project Description:</strong> I built Suade to turn messy medical PDFs
-                    into a visual "health dashboard." It extracts medical data from the documents and shows the user
-                    their health trends over time, like a Spotify Wrapped for their body.</p>
-            </div>
-
-            <div class="bento-item shape-3 color-bg-yellow">
-                <div class="bullet-list">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>Outcomes</h4>
-                    <div class="metrics-grid">
-                        <div class="metric"><span class="metric-number">Auto</span><span
-                                class="metric-label">PDF-to-Graph Pipeline</span>
-                            <div class="metric-detail">Seamless extraction and visual trends.</div>
-                        </div>
-                        <div class="metric"><span class="metric-number">100%</span><span class="metric-label">Private &
-                                Ephemeral</span>
-                            <div class="metric-detail">Data is processed securely without storage.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bento-item shape-2 color-bg-charcoal visual-bento">
-                <div class="image-placeholder">
-                    <span>IMAGE/VIDEO GOES HERE</span>
-                </div>
-            </div>
-
-            <div class="bento-item shape-4 color-bg-turquoise" style="grid-column: 1 / -1;">
-                <div class="bullet-list tech-stack-grid">
-                    <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>Tech Stack</h4>
-                    <ul>
-                        <li>
-                            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
-                                    <path d="M14 3v5h5M16 13H8M16 17H8M10 9H8" />
-                                </svg></div>
-                            <div class="tech-content">
-                                <strong>Data Extraction</strong>
-                                <span>Google Document AI & Cloud Healthcare NLP</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <polyline points="16 18 22 12 16 6"></polyline>
-                                    <polyline points="8 6 2 12 8 18"></polyline>
-                                </svg></div>
-                            <div class="tech-content">
-                                <strong>Processing</strong>
-                                <span>Python</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="tech-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                                </svg></div>
-                            <div class="tech-content">
-                                <strong>Environment</strong>
-                                <span>Google Cloud Platform (GCP)</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT FORM -->
-    <section id="contact" class="form-section">
-        <h2 class="section-title" style="background: var(--paper-yellow); color: var(--charcoal);">GET IN TOUCH</h2>
-        <form class="charcoal-form" action="#" method="POST">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="company_email" placeholder="Company Email" required>
-            <textarea name="message" placeholder="Message" rows="5" required></textarea>
-            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">SEND MESSAGE</button>
-        </form>
-    </section>
-
-    <div class="footer-text">
-        Anas Ahammed © 2026. ALL RIGHTS RESERVED.
-    </div>
+    </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('reveal-visible');
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-
-            document.querySelectorAll('.reveal-hidden').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Jelly effect and text wall on mousemove
-            const textWall = document.getElementById('heroTextWall');
-            const heroContent = document.getElementById('heroContent');
-            if (textWall) {
-                const wallText = "Creating web sites, designing presentations • Building AI powered platforms, Vibe coding • Email Marketing, SMS Marketing, Analytics & Dashboards • Sales enablement, Content Marketing, Brand building • Product development, Project Management, Account Management • ";
-                textWall.innerHTML = wallText.repeat(50);
-            }
-
-            document.addEventListener('mousemove', (e) => {
-                if (textWall && heroContent) {
-                    const rect = heroContent.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    textWall.style.setProperty('--mx', `${x}px`);
-                    textWall.style.setProperty('--my', `${y}px`);
+        // ── Scroll reveal ──────────────────────────────────────────
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
                 }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-                document.querySelectorAll('.jelly-effect').forEach(el => {
-                    const rect = el.getBoundingClientRect();
-                    const centerX = rect.left + rect.width / 2;
-                    const centerY = rect.top + rect.height / 2;
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-                    // Magnetic pull towards the mouse, clamped so it doesn't fly too far
-                    const distX = e.clientX - centerX;
-                    const distY = e.clientY - centerY;
+        // ── Mobile nav toggle ──────────────────────────────────────
+        const toggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
 
-                    const moveX = Math.max(-30, Math.min(30, distX * 0.04));
-                    const moveY = Math.max(-30, Math.min(30, distY * 0.04));
+        toggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
 
-                    el.style.setProperty('--jx', `${moveX}px`);
-                    el.style.setProperty('--jy', `${moveY}px`);
-                });
+        // Close nav on link click
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                navLinks.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
             });
         });
-    </script>
-</body>
 
+        // ── Project card expand ────────────────────────────────────
+        document.querySelectorAll('.project-card__expand-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('aria-controls');
+                const detail = document.getElementById(targetId);
+                const arrow = btn.querySelector('span');
+                const isOpen = detail.classList.toggle('is-open');
+                btn.setAttribute('aria-expanded', isOpen);
+                arrow.textContent = isOpen ? '↑' : '↓';
+            });
+        });
+
+        // ── Contact form ───────────────────────────────────────────
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.btn--submit');
+            btn.textContent = 'Message sent ✓';
+            btn.style.background = '#1e5a50';
+            btn.disabled = true;
+        });
+    </script>
+
+</body>
 </html>
