@@ -7,10 +7,6 @@
     <title>Anas Ahammed — AI Adoption Consultant, Sydney</title>
     <meta name="description" content="I embed with SMB and mid-market teams to find where AI creates real leverage, then build the tools and internal capability that make adoption stick.">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Page-specific tweaks */
-        .site-nav { position: sticky; }
-    </style>
 </head>
 
 <body>
@@ -39,25 +35,48 @@
     <main>
 
         <!-- ====================================================
-             HERO
+             HERO — dark with gradient glow
              ==================================================== -->
 
         <section class="hero" id="home">
+            <div class="hero-dotgrid" aria-hidden="true"></div>
             <div class="container">
-                <p class="hero__eyebrow reveal">AI Adoption Consultant — Sydney</p>
+                <div class="hero__eyebrow reveal">
+                    <span class="hero__eyebrow-dot"></span>
+                    AI Adoption Consultant — Sydney, NSW
+                </div>
                 <h1 class="hero__headline reveal reveal--delay-1">
-                    I help teams adopt AI that actually sticks.
+                    I help teams adopt AI that <em>actually sticks.</em>
                 </h1>
                 <p class="hero__sub reveal reveal--delay-2">
                     Embedded consulting for SMB and mid-market teams. Audit workflows, identify where AI creates real leverage, build the tools and internal capability that make the change hold.
                 </p>
                 <div class="hero__ctas reveal reveal--delay-3">
-                    <a href="#case-studies" class="btn btn--primary">See my work</a>
+                    <a href="#case-studies" class="btn btn--primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 12h20M15 6l6 6-6 6"/></svg>
+                        See my work
+                    </a>
                     <a href="#contact" class="btn btn--ghost">Get in touch</a>
                 </div>
-                <p class="hero__caption reveal reveal--delay-4">
-                    Currently working with clients across healthcare, property, and franchise operations in Sydney and regional NSW.
-                </p>
+
+                <div class="hero__stats reveal reveal--delay-4">
+                    <div>
+                        <span class="hero__stat-value">300+</span>
+                        <span class="hero__stat-label">Reports processed (live system)</span>
+                    </div>
+                    <div>
+                        <span class="hero__stat-value">$6k/mo</span>
+                        <span class="hero__stat-label">Revenue recovered for a client</span>
+                    </div>
+                    <div>
+                        <span class="hero__stat-value">7.5 yr</span>
+                        <span class="hero__stat-label">Enterprise account management</span>
+                    </div>
+                    <div>
+                        <span class="hero__stat-value">0</span>
+                        <span class="hero__stat-label">Compliance incidents</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -76,7 +95,7 @@
                     <span>Evergreen Garden Care</span>
                     <span>Pringles</span>
                     <span>Rentokil Initial</span>
-                    <!-- duplicate for infinite scroll -->
+                    <!-- Duplicate for scroll -->
                     <span>Nespresso</span>
                     <span>PPG Paints</span>
                     <span>Unilever Food Solutions</span>
@@ -145,7 +164,7 @@
                         <div class="case-card__stats">
                             <div class="case-stat">
                                 <span class="case-stat__value">$6k/mo</span>
-                                <span class="case-stat__label">Revenue recovery target</span>
+                                <span class="case-stat__label">Revenue recovery</span>
                             </div>
                             <div class="case-stat">
                                 <span class="case-stat__value">4 wk</span>
@@ -153,7 +172,7 @@
                             </div>
                             <div class="case-stat">
                                 <span class="case-stat__value">4</span>
-                                <span class="case-stat__label">Franchises onboarding</span>
+                                <span class="case-stat__label">Franchises</span>
                             </div>
                         </div>
                         <span class="case-card__cta">Read case study <span class="case-card__arrow">→</span></span>
@@ -267,6 +286,10 @@
                     <div class="about-sidebar reveal">
                         <h2 class="about-sidebar__heading">About</h2>
                         <p class="about-sidebar__philosophy">"Tools are the easy part. Adoption is the job."</p>
+                        <span class="about-sidebar__badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Newtown, Sydney NSW
+                        </span>
                     </div>
                     <div class="about-body">
                         <p class="reveal">
@@ -284,7 +307,7 @@
         </section>
 
         <!-- ====================================================
-             SIDE PROJECTS
+             SIDE PROJECTS — dark section
              ==================================================== -->
 
         <section id="projects">
@@ -295,7 +318,7 @@
                         <h2 class="section-heading reveal reveal--delay-1">The laboratory behind the consulting work.</h2>
                     </div>
                     <p class="section-intro reveal">
-                        The consulting work is the output. These are the experiments and personal projects where I test working methods, push the tools past their defaults, and build things I'd want to use myself. Most of what ends up in client work was first stress-tested here.
+                        The consulting work is the output. These are the experiments and personal projects where I test working methods, push the tools past their defaults, and build things I'd want to use myself.
                     </p>
                 </div>
 
@@ -303,19 +326,26 @@
 
                     <!-- Halcyon01 -->
                     <div class="project-card reveal">
+                        <div class="project-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                                <path d="M12 6v6l4 2"/>
+                                <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
                         <span class="project-card__year">2025 · Ongoing</span>
                         <h3 class="project-card__title">Halcyon01</h3>
                         <span class="project-card__subtitle">Personal digital twin — voice-native AI meta-agent</span>
                         <p class="project-card__summary">
-                            A multi-modal AI agent that takes natural language commands, finds the right tool via semantic search, and executes. Built to stress-test how far agent-accountability patterns can scale.
+                            A multi-modal AI agent that takes natural language commands, finds the right tool via semantic search, and executes. Built to stress-test agent-accountability patterns at scale.
                         </p>
                         <span class="project-card__status">Ongoing personal project</span>
                         <button class="project-card__expand-btn" aria-expanded="false" aria-controls="halcyon-detail">
                             More detail <span>↓</span>
                         </button>
                         <div class="project-card__detail" id="halcyon-detail">
-                            <p>The core architecture is a semantic-search tool router. A local ChromaDB vector database indexes a library of modular Python functions. When I give a command in natural language, the agent performs a semantic search to find the most relevant tool, uses Gemini to extract the specific arguments from my phrasing, and executes. New tools can be added without retraining anything.</p>
-                            <p style="margin-top:0.75rem;">Around that core: a voice-native interface using asyncio for real-time interruptible conversations, vision capabilities via screenshots and Tesseract OCR, a Tkinter GUI control panel, and a Streamlit dashboard. An offline "rumination engine" analyses conversation history and a personal journal to maintain a psyche profile (OCEAN model) that tailors assistance style.</p>
+                            <p>The core architecture is a semantic-search tool router. A local ChromaDB vector database indexes a library of modular Python functions. When I give a command in natural language, the agent performs a semantic search, uses Gemini to extract the specific arguments from my phrasing, and executes. New tools can be added without retraining anything.</p>
+                            <p style="margin-top:0.75rem;">Around that core: a voice-native interface using asyncio for real-time interruptible conversations, vision capabilities via Tesseract OCR, a Tkinter GUI panel, and a Streamlit dashboard with an offline "rumination engine" that maintains a psyche profile (OCEAN model) to tailor assistance style.</p>
                             <div class="tech-pills">
                                 <span class="tech-pill">ChromaDB</span>
                                 <span class="tech-pill">Google Gemini</span>
@@ -323,13 +353,17 @@
                                 <span class="tech-pill">Deepgram</span>
                                 <span class="tech-pill">Tesseract</span>
                                 <span class="tech-pill">Streamlit</span>
-                                <span class="tech-pill">Tkinter</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Suade -->
                     <div class="project-card reveal reveal--delay-1">
+                        <div class="project-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
                         <span class="project-card__year">2025 · Prototype</span>
                         <h3 class="project-card__title">Suade</h3>
                         <span class="project-card__subtitle">Personal blood analysis dashboard</span>
@@ -342,7 +376,7 @@
                         </button>
                         <div class="project-card__detail" id="suade-detail">
                             <p>Built for me to track my own blood markers over time — the same messy lab PDFs turned into a clean, scrollable visual dashboard with trends, flagging, and plain-English explanations.</p>
-                            <p style="margin-top:0.75rem;">Two outcomes: the technical pipeline (OCR → Document AI → LLM sense-check → dashboard) was developed and tested before any client saw it. The "Spotify Wrapped for your body" visual idea — the thing that made the clinic owner see this as a sales tool — was proven out here first.</p>
+                            <p style="margin-top:0.75rem;">Two outcomes: the technical pipeline (OCR → Document AI → LLM sense-check → dashboard) was developed and tested before any client saw it. The "Spotify Wrapped for your body" visual idea, proven here first, was what made the clinic owner see this as a sales tool.</p>
                             <div class="tech-pills">
                                 <span class="tech-pill">Google Document AI</span>
                                 <span class="tech-pill">Python</span>
@@ -356,7 +390,7 @@
         </section>
 
         <!-- ====================================================
-             CAPABILITIES
+             CAPABILITIES — with icons
              ==================================================== -->
 
         <section id="capabilities">
@@ -366,7 +400,16 @@
                 <p class="section-intro reveal reveal--delay-2">The list changes — consulting means matching the right tool to the problem, not maintaining allegiance to a stack.</p>
 
                 <div class="cap-grid">
+
+                    <!-- AI Ecosystem -->
                     <div class="cap-card reveal">
+                        <div class="cap-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
+                                <circle cx="7.5" cy="14.5" r="1.5" fill="currentColor" stroke="none"/>
+                                <circle cx="16.5" cy="14.5" r="1.5" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </div>
                         <p class="cap-card__name">AI ecosystem</p>
                         <p class="cap-card__desc">Daily-driver tools for client work and experimentation</p>
                         <ul class="cap-card__tools">
@@ -378,7 +421,17 @@
                             <li>MCP integrations</li>
                         </ul>
                     </div>
+
+                    <!-- Consulting -->
                     <div class="cap-card reveal reveal--delay-1">
+                        <div class="cap-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
                         <p class="cap-card__name">Consulting</p>
                         <p class="cap-card__desc">How the work gets delivered</p>
                         <ul class="cap-card__tools">
@@ -390,7 +443,15 @@
                             <li>Stakeholder management</li>
                         </ul>
                     </div>
+
+                    <!-- Build -->
                     <div class="cap-card reveal reveal--delay-2">
+                        <div class="cap-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
                         <p class="cap-card__name">Build</p>
                         <p class="cap-card__desc">Full-stack delivery for client engagements</p>
                         <ul class="cap-card__tools">
@@ -402,7 +463,16 @@
                             <li>Retool, HubSpot, Webflow</li>
                         </ul>
                     </div>
+
+                    <!-- Data -->
                     <div class="cap-card reveal reveal--delay-3">
+                        <div class="cap-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
                         <p class="cap-card__name">Data &amp; analytics</p>
                         <p class="cap-card__desc">Making the system visible</p>
                         <ul class="cap-card__tools">
@@ -413,7 +483,14 @@
                             <li>Multi-source reporting integrations</li>
                         </ul>
                     </div>
+
+                    <!-- Content -->
                     <div class="cap-card reveal reveal--delay-4">
+                        <div class="cap-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
                         <p class="cap-card__name">Content &amp; design</p>
                         <p class="cap-card__desc">The craft layer from 7.5 years of enterprise work</p>
                         <ul class="cap-card__tools">
@@ -425,6 +502,7 @@
                             <li>Canva, CapCut</li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -448,7 +526,7 @@
                                     <span>Jan 2026</span><br>
                                     <span>Present</span>
                                 </div>
-                                <div>
+                                <div class="exp-content">
                                     <p class="exp-role">Independent AI Adoption Consultant</p>
                                     <p class="exp-org">Freelance — Sydney &amp; regional NSW</p>
                                     <p class="exp-summary">Embedded AI adoption work with SMB clients across healthcare, property, and franchise operations. See <a href="case/sydney-health-clinic.html">case study 01</a>, <a href="case/franchise-network.html">02</a>, and <a href="case/regional-real-estate.html">03</a>.</p>
@@ -460,7 +538,7 @@
                                     <span>Feb 2018</span><br>
                                     <span>Oct 2025</span>
                                 </div>
-                                <div>
+                                <div class="exp-content">
                                     <p class="exp-role">Technical Marketing Lead &amp; Multimedia Specialist</p>
                                     <p class="exp-org">Pitchpocket — Sydney</p>
                                     <p class="exp-summary">Enterprise account management and technical delivery at a micro-SaaS startup. Clients including PPG Paints, Nespresso, Unilever Food Solutions, Evergreen Garden Care. Shipped the Stakaroo AI platform as final project. See <a href="case/stakaroo.html">case study 04</a> and <a href="case/pitchpocket.html">05</a>.</p>
@@ -470,8 +548,16 @@
                         </div>
 
                         <div class="education-block reveal">
-                            <p class="education-block__inst">University of Sydney</p>
-                            <p class="education-block__qual">Bachelor of Commerce — Marketing &amp; Business Information Systems, 2015–2018</p>
+                            <div class="education-block__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="education-block__inst">University of Sydney</p>
+                                <p class="education-block__qual">Bachelor of Commerce — Marketing &amp; Business Information Systems · 2015–2018</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -479,7 +565,7 @@
         </section>
 
         <!-- ====================================================
-             CONTACT
+             CONTACT — dark section
              ==================================================== -->
 
         <section id="contact">
@@ -492,14 +578,34 @@
                         <p class="contact-left__intro">
                             If you're exploring AI adoption for your team — or hiring for a role where this kind of work would land — I'd love to hear from you. Direct email is the fastest path.
                         </p>
-                        <a href="mailto:anasmoin@gmail.com" class="contact-email">
-                            anasmoin@gmail.com ↗
-                        </a>
-                        <p class="contact-note">
-                            Based in Newtown, Sydney.<br>
-                            Open to remote and hybrid engagements across Australia.
-                        </p>
+
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-detail__label">Email</span>
+                                <a href="mailto:anasmoin@gmail.com" class="contact-email">anasmoin@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-detail__label">Location</span>
+                                <p class="contact-note" style="margin:0;">Newtown, Sydney NSW · Remote &amp; hybrid across Australia</p>
+                            </div>
+                        </div>
                     </div>
+
                     <form class="contact-form reveal reveal--delay-2" id="contactForm" action="#" method="POST" novalidate>
                         <div class="form-field">
                             <label for="name">Name</label>
@@ -513,7 +619,10 @@
                             <label for="message">What's on your mind?</label>
                             <textarea id="message" name="message" rows="5" placeholder="Tell me about the challenge you're trying to solve..." required></textarea>
                         </div>
-                        <button type="submit" class="btn--submit">Send message →</button>
+                        <button type="submit" class="btn--submit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            Send message
+                        </button>
                     </form>
                 </div>
             </div>
@@ -557,7 +666,6 @@
             toggle.setAttribute('aria-expanded', isOpen);
         });
 
-        // Close nav on link click
         navLinks.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', () => {
                 navLinks.classList.remove('is-open');
@@ -581,8 +689,8 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = this.querySelector('.btn--submit');
-            btn.textContent = 'Message sent ✓';
-            btn.style.background = '#1e5a50';
+            btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Message sent`;
+            btn.style.background = '#134e4a';
             btn.disabled = true;
         });
     </script>
