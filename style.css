@@ -277,6 +277,69 @@ section {
     z-index: 1;
 }
 
+.hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 5rem;
+    align-items: center;
+}
+
+.hero__portrait-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.hero__portrait {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 16px 60px 16px 60px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border: 3px solid rgba(255,255,255,0.1);
+}
+
+/* Decorative ring behind portrait */
+.hero__portrait-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    border-radius: 20px 70px 20px 70px;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    z-index: 0;
+}
+
+/* Teal glow under portrait */
+.hero__portrait-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 10%;
+    right: 10%;
+    height: 80px;
+    background: radial-gradient(ellipse, rgba(20,184,166,0.25) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .hero__inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .hero__portrait-wrap {
+        display: flex;
+        justify-content: center;
+        order: -1;
+    }
+    .hero__portrait {
+        max-width: 260px;
+    }
+}
+
 .hero__eyebrow {
     display: inline-flex;
     align-items: center;
