@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case 01 — Sydney Health Clinic | Anas Ahammed</title>
-    <meta name="description" content="Compliance-grade AI pipeline for blood-test report processing at a Sydney health clinic. 300+ reports, zero compliance incidents.">
+    <title>Case 01 — Sydney Health Clinic | Ahmed Ahammed</title>
+    <meta name="description" content="A boring medical PDF, turned into a sales tool that actually drives business. AI pipeline for blood-test report processing at a Sydney clinic.">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body class="case-study-page">
+    <div class="reading-progress" id="readingProgress"></div>
 
     <header class="site-nav">
         <div class="nav-inner">
-            <a href="../index.html" class="nav-logo">Anas Ahammed</a>
+            <a href="../index.html" class="nav-logo">Ahmed Ahammed</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="../index.html#case-studies">Work</a></li>
                 <li><a href="../index.html#about">About</a></li>
@@ -28,31 +29,18 @@
         <section class="case-hero">
             <div class="container">
                 <a class="case-hero__back" href="../index.html#case-studies">← Back to work</a>
-                <p class="case-hero__tag">01 — Health &amp; beauty clinic</p>
+                <p class="case-hero__tag">01 · Health &amp; beauty clinic</p>
                 <h1 class="case-hero__headline">
-                    Turning a clinical admin task into a branded sales tool — and processing 300+ reports with zero compliance incidents
+                    A boring medical PDF, turned into a sales tool that actually drives business
                 </h1>
                 <p class="case-hero__oneliner">
-                    Compliance-grade AI pipeline for blood-test report processing at a Sydney health clinic.
+                    Built an AI pipeline that turns scanned blood test reports into branded, easy-to-read health dashboards for a Sydney clinic.
                 </p>
-
-                <div class="case-stats">
-                    <div class="case-stat-item">
-                        <span class="case-stat-item__value">300+</span>
-                        <span class="case-stat-item__label">Reports processed</span>
-                    </div>
-                    <div class="case-stat-item">
-                        <span class="case-stat-item__value">~2 hrs</span>
-                        <span class="case-stat-item__label">Saved per patient</span>
-                    </div>
-                    <div class="case-stat-item">
-                        <span class="case-stat-item__value">0</span>
-                        <span class="case-stat-item__label">Compliance incidents</span>
-                    </div>
-                    <div class="case-stat-item">
-                        <span class="case-stat-item__value">Phase 2</span>
-                        <span class="case-stat-item__label">Scoping in progress</span>
-                    </div>
+                <div class="case-facts">
+                    <div class="case-fact-item"><span class="case-fact-item__value">300+</span><span class="case-fact-item__label">Reports running through the system</span></div>
+                    <div class="case-fact-item"><span class="case-fact-item__value">~2 hrs</span><span class="case-fact-item__label">Saved per patient consultation</span></div>
+                    <div class="case-fact-item"><span class="case-fact-item__value">200+</span><span class="case-fact-item__label">Real lab reports tested against</span></div>
+                    <div class="case-fact-item"><span class="case-fact-item__value">Phase 2</span><span class="case-fact-item__label">Already in scoping</span></div>
                 </div>
             </div>
         </section>
@@ -60,53 +48,57 @@
         <section class="case-body">
             <div class="case-body__inner">
                 <nav class="case-labels" aria-label="Case study sections">
-                    <span class="case-label-item">The client</span>
+                    <span class="case-label-item">The setup</span>
                     <span class="case-label-item">The problem</span>
-                    <span class="case-label-item">What I did</span>
-                    <span class="case-label-item">The result</span>
+                    <span class="case-label-item">What I built</span>
+                    <span class="case-label-item">How it landed</span>
                     <span class="case-label-item">What I learned</span>
                 </nav>
 
                 <div class="case-sections">
 
+                    <blockquote class="case-pull-quote reveal">
+                        "The owner didn't want a processing tool. He wanted a sales tool. Recognising that changed the whole design."
+                    </blockquote>
+
                     <div class="case-section reveal">
-                        <h2 class="case-section__heading">The client</h2>
+                        <h2 class="case-section__heading">The setup</h2>
                         <div class="case-section__body">
-                            <p>A Sydney health and beauty clinic offering peptide therapies and high-value treatments — typical spend per patient is over $1,000. Before any treatment, every patient needs a blood test analysed and approved by a medical practitioner. That's a compliance requirement and also a trust signal for their clients. The clinic processes over 200 treatment patients a month, but they're running blood tests for significantly more — people come in, get tested, and use the consultation to decide whether to proceed.</p>
+                            <p>A Sydney clinic doing peptide therapies and high-end treatments — typical spend per patient is over a thousand dollars. Before any treatment, every patient needs a blood test analysed and signed off by a doctor. Partly because it's the law. Partly because it's how the clinic earns trust with patients about to hand over a lot of money.</p>
+                            <p>They process over 200 treatment patients a month, and they run blood tests for significantly more — people come in, get tested, and use the consultation to decide whether to go ahead.</p>
                         </div>
                     </div>
 
                     <div class="case-section reveal">
-                        <h2 class="case-section__heading">The problem as they described it</h2>
+                        <h2 class="case-section__heading">The problem</h2>
                         <div class="case-section__body">
-                            <p>The existing process was completely manual. A patient came in for a consultation, the clinic staff would sit with them and walk through a standard lab report — small text, tiny decimal points, medical jargon — trying to explain what each marker meant and what it suggested about their health. It took about two hours per patient. It didn't scale, it wasn't repeatable across staff, and the output was a generic lab PDF that looked exactly like every other blood test they'd had in their life.</p>
-                            <p>The owner had a sharper insight than just "automate this." He pointed out that the consultation was also the highest-value moment in the sales funnel — the point where a patient decides whether to book a $1,000+ treatment. A hard-to-read lab report was actively working against that moment. He wanted a tool that did two things at once: make the data clinically useful, and be a beautiful, branded take-home asset that the patient would remember. A processing tool and a sales tool in one.</p>
+                            <p>The whole thing was manual. A patient would come in, and a staff member would sit with them for two hours walking through a standard lab report — tiny numbers, medical jargon, reference ranges in fine print — trying to explain what it all meant. It didn't scale. It wasn't repeatable. And the take-home document was a generic lab PDF that looked exactly like every other blood test the patient had ever received.</p>
+                            <p>The owner spotted something sharper than "let's automate this." He pointed out that the consultation was also the moment a patient decides whether to book a $1,000+ treatment. A confusing lab report was actively working against that moment. He wanted the same tool to do two jobs — make the data clinically useful, AND be a beautiful, branded thing the patient actually wants to keep.</p>
                         </div>
                     </div>
 
                     <div class="case-section reveal">
-                        <h2 class="case-section__heading">What I did</h2>
+                        <h2 class="case-section__heading">What I built</h2>
                         <div class="case-section__body">
-                            <p>The hardest part of this build was never the dashboard — it was the data extraction. Blood reports come in wildly different formats depending on the lab, most of them as scanned PDFs, with numbers, units, and reference ranges arranged in inconsistent layouts. I spent about a week trying different extraction methods. Traditional OCR failed fast — you can't hardcode formatting rules when the formatting itself is a moving target. I tried a few OCR libraries and parsers before landing on Google Document AI, which handled scanned layouts far better and had AI-backed pre-categorisation of the extracted values.</p>
-                            <p>After extraction, I passed the data through an LLM with a medical terminology dictionary to sense-check the markers — standardising names, catching obvious extraction errors, flagging values outside reference ranges. From there I built the dashboard: clean marker presentation with plain-English explanations, flagged high/low readings, health and beauty recommendations aligned to the findings, and a biological age calculation. All branded to the clinic.</p>
-                            <p>Compliance shaped the architecture from day one. Australian health data regulations require strict handling — patient names and personal details are stripped before processing and stored separately in secure cloud storage rather than locally. Original lab reports are held ephemerally during processing and purged afterwards. All processing happens onshore. Every generated report routes to a medical practitioner for approval before it can reach a patient — they cross-check the generated report against the original lab report and sign off. The doctor is still in the loop at the point that matters; the AI just removes two hours of prep from their workflow.</p>
-                            <p>The technical side: web app hosted on Render, authenticated access for clinic staff and the approving practitioner, PDF upload per report to keep the flow simple. The clinic is now scoping a phase two with me — a full patient-facing dashboard with historical data and treatment history over time.</p>
+                            <p>The hardest bit wasn't the dashboard. It was the extraction. Blood reports come in wildly different layouts depending on the lab, and most of them arrive as scanned PDFs with numbers and units scattered all over the page. Traditional OCR failed fast — you can't write rules for something that has no consistent shape.</p>
+                            <p>After a week of trying different approaches, I landed on Google Document AI for the extraction, then passed the data through an LLM with a medical dictionary to sense-check and standardise it. From there it became a clean, branded dashboard — plain-English marker explanations, high/low flags, health and beauty recommendations tied to the findings, and a biological age calculation.</p>
+                            <p>Compliance shaped the architecture from day one. Patient names get stripped before processing. Original lab PDFs are held only for as long as processing takes, then purged. All processing happens onshore. And every generated report routes to a doctor for approval before it reaches the patient. The doctor is still in the loop where it counts — the AI just takes two hours of prep out of their day.</p>
                         </div>
                     </div>
 
                     <div class="case-section reveal">
-                        <h2 class="case-section__heading">The result</h2>
+                        <h2 class="case-section__heading">How it landed</h2>
                         <div class="case-section__body">
-                            <p>The system is live. Over 300 reports have been generated through the pipeline. Patients receive a branded PDF by email — the clinic doesn't yet expose the web app directly to patients, that's coming in phase two. What was a two-hour manual task is now an approval workflow that takes the practitioner a few minutes per report.</p>
-                            <p>The clinic has turned a boring, uninteresting document into something that actively helps drive business and helps their customers actually understand what their blood tests mean.</p>
+                            <p>The system is live. Over 300 reports have gone through it. Patients receive a branded PDF by email. What was a two-hour manual task is now a quick approval step. The clinic is already scoping phase two with me — a patient-facing dashboard that tracks their results over time.</p>
+                            <p>A boring, unreadable lab document became something that actively helps drive the business and helps customers understand what their body is telling them.</p>
                         </div>
                     </div>
 
                     <div class="case-section reveal">
                         <h2 class="case-section__heading">What I learned</h2>
                         <div class="case-section__body">
-                            <p>The technical problem looked like the hard part. It wasn't. The hard part was earning trust in a regulated, high-stakes context. A decimal point in the wrong place on a blood marker isn't a bug — it's a patient being told something wrong about their health. So the most valuable work I did on this project wasn't writing code. It was collecting over 200 real lab reports, manually verifying the expected extraction results, and writing a test suite that ran after every processing change to catch regressions. That's the work that made the system trustworthy enough for a doctor to stake their signature on.</p>
-                            <p>The other lesson is about reframing the brief. The owner didn't just want a processing tool — he wanted a sales tool. Recognising that early changed the entire design. The reports aren't just accurate; they're beautiful, branded, and something the patient wants to read. That's the difference between solving a task and solving a business problem.</p>
+                            <p>The technical problem looked like the hard part. It wasn't. The hard part was earning trust in a space where a decimal point in the wrong place means a patient is told something wrong about their health. So the most valuable work I did wasn't writing code — it was collecting 200+ real lab reports, manually verifying every extraction, and writing a test suite that catches regressions every time something changes. That's the work that made it safe for a doctor to sign off.</p>
+                            <p>The bigger lesson was about reframing the brief. The owner didn't ask for a processing tool — he asked for a sales tool. Spotting that upfront changed the entire design. That's the difference between solving a task and solving a business problem.</p>
                         </div>
                     </div>
 
@@ -131,8 +123,8 @@
                     <span class="case-nav__title">Back to work</span>
                 </a>
                 <a href="franchise-network.html" class="case-nav__link" style="text-align:right;">
-                    <span class="case-nav__label">Next case study →</span>
-                    <span class="case-nav__title">Recovering $6k/month in lost revenue</span>
+                    <span class="case-nav__label">Next →</span>
+                    <span class="case-nav__title">$6k/month slipping through a window</span>
                 </a>
             </div>
         </nav>
@@ -140,7 +132,7 @@
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <span class="footer-name">Anas Ahammed © 2026</span>
+            <span class="footer-name">Ahmed Ahammed © 2026</span>
             <ul class="footer-links">
                 <li><a href="mailto:anasmoin@gmail.com">Email</a></li>
                 <li><a href="../cv.html">CV</a></li>
@@ -149,17 +141,11 @@
     </footer>
 
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
-        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        const toggle = document.getElementById('navToggle');
-        const navLinks = document.getElementById('navLinks');
-        toggle.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('is-open');
-            toggle.setAttribute('aria-expanded', isOpen);
-        });
+        const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting){x.target.classList.add('is-visible');obs.unobserve(x.target);}}),{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+        const t=document.getElementById('navToggle'),nl=document.getElementById('navLinks');
+        t.addEventListener('click',()=>{const o=nl.classList.toggle('is-open');t.setAttribute('aria-expanded',o);});
+        window.addEventListener('scroll',()=>{const p=document.getElementById('readingProgress');const h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=((window.scrollY/h)*100)+'%';});
     </script>
 </body>
 </html>
