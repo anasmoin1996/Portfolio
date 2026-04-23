@@ -1,394 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anas Ahammed - CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* CV Specific Styles */
-        body {
-            background-color: var(--canvas-base);
-            margin: 0;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-        }
-
-        .cv-container {
-            width: 100%;
-            max-width: 850px;
-            background: white;
-            padding: 4rem 5rem;
-            box-shadow: 15px 15px 0 var(--charcoal);
-            border: 4px solid var(--charcoal);
-            position: relative;
-            z-index: 50;
-        }
-
-        .cv-header {
-            border-bottom: 4px solid var(--charcoal);
-            padding-bottom: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .cv-name {
-            font-family: 'Unbounded', sans-serif;
-            font-size: 3rem;
-            font-weight: 900;
-            margin: 0;
-            line-height: 1;
-            text-transform: uppercase;
-            color: var(--charcoal);
-        }
-
-        .cv-title {
-            font-family: 'Space Mono', monospace;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--paper-blue);
-            margin-top: 0.5rem;
-            text-transform: uppercase;
-        }
-
-        .cv-contact {
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            font-weight: bold;
-        }
-
-        .cv-summary {
-            font-size: 1.05rem;
-            line-height: 1.6;
-            margin-top: 1.5rem;
-        }
-
-        .cv-section-title {
-            font-family: 'Unbounded', sans-serif;
-            font-size: 1.5rem;
-            color: white;
-            background: var(--charcoal);
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            transform: rotate(-1deg);
-        }
-
-        .cv-section-content {
-            margin-bottom: 2rem;
-        }
-
-        /* Lists */
-        .cv-list {
-            padding-left: 1.5rem;
-            margin: 0.5rem 0 1.5rem;
-        }
-
-        .cv-list li {
-            margin-bottom: 0.4rem;
-            line-height: 1.5;
-            list-style-type: square;
-        }
-
-        /* Experience Items */
-        .cv-job {
-            margin-bottom: 2rem;
-        }
-
-        .cv-job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.5rem;
-        }
-
-        .cv-company {
-            font-family: 'Unbounded', sans-serif;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin: 0;
-        }
-
-        .cv-role {
-            font-weight: bold;
-            color: var(--paper-pink);
-            font-size: 1.1rem;
-            margin: 0.2rem 0;
-        }
-
-        .cv-date {
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: #666;
-        }
-
-        .cv-project-title {
-            font-weight: bold;
-            font-size: 1.05rem;
-            margin-top: 1rem;
-            margin-bottom: 0.2rem;
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 3px;
-        }
-
-        /* Floating action buttons */
-        .floating-actions {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            z-index: 100;
-        }
-
-        .btn-print {
-            background: var(--paper-pink);
-            color: white;
-            padding: 1rem 1.5rem;
-            font-family: 'Unbounded', sans-serif;
-            font-weight: bold;
-            text-transform: uppercase;
-            border: 3px solid var(--charcoal);
-            box-shadow: 6px 6px 0 var(--charcoal);
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-print:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 4px 4px 0 var(--charcoal);
-        }
-
-        .btn-back {
-            background: var(--paper-yellow);
-            color: var(--charcoal);
-            text-decoration: none;
-            padding: 1rem 1.5rem;
-            font-family: 'Unbounded', sans-serif;
-            font-weight: bold;
-            text-transform: uppercase;
-            border: 3px solid var(--charcoal);
-            box-shadow: 6px 6px 0 var(--charcoal);
-            text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-back:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 4px 4px 0 var(--charcoal);
-        }
-
-        /* Print Styles - crucial for the PDF generation */
-        @media print {
-            @page {
-                margin: 0;
-                size: A4 portrait;
-            }
-            body {
-                background: white;
-                padding: 0;
-                display: block;
-            }
-            .cv-container {
-                max-width: none;
-                width: 100%;
-                border: none;
-                box-shadow: none;
-                padding: 2cm; /* Standard margins inside the document */
-                margin: 0;
-            }
-            .floating-actions, .paper-surface, .filter-container {
-                display: none !important;
-            }
-            * {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
-        }
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anas Ahammed — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+ 
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --bone:        #f5f2ec;
+      --ink:         #1a1814;
+      --ink-mid:     #4a4640;
+      --ink-soft:    #8a8480;
+      --clay:        #b85c38;
+      --clay-light:  #f0e8e3;
+      --rule:        #d8d2c8;
+ 
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --font-mono:    'DM Mono', 'Courier New', monospace;
+ 
+      --page-w: 780px;
+      --gap:    2rem;
+    }
+ 
+    /* ============================================================
+       RESET + BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    body {
+      background: #e8e4dc;
+      font-family: var(--font-body);
+      color: var(--ink);
+      padding: 3rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+ 
+    /* ============================================================
+       PAGE SHELL
+    ============================================================ */
+    .page {
+      background: var(--bone);
+      max-width: var(--page-w);
+      margin: 0 auto;
+      padding: 4rem 4.5rem;
+      position: relative;
+    }
+ 
+    /* Subtle left accent bar */
+    .page::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--clay);
+    }
+ 
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    .cv-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: start;
+      padding-bottom: 2rem;
+      border-bottom: 1.5px solid var(--rule);
+      margin-bottom: 2.5rem;
+    }
+ 
+    .cv-name {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      color: var(--ink);
+    }
+ 
+    .cv-title {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-top: 0.55rem;
+    }
+ 
+    .cv-contact {
+      text-align: right;
+      font-size: 0.8rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+ 
+    .cv-contact a {
+      color: var(--ink-mid);
+      text-decoration: none;
+    }
+ 
+    .cv-contact a:hover {
+      color: var(--clay);
+    }
+ 
+    /* ============================================================
+       SUMMARY
+    ============================================================ */
+    .cv-summary {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--ink-mid);
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+      font-style: italic;
+    }
+ 
+    .cv-summary strong {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--ink);
+    }
+ 
+    /* ============================================================
+       SECTION LABELS
+    ============================================================ */
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+ 
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+ 
+    /* ============================================================
+       CAPABILITIES GRID
+    ============================================================ */
+    .capabilities {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+ 
+    .cap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+    }
+ 
+    .cap-item {
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+ 
+    .cap-label {
+      font-weight: 500;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+ 
+    .cap-value {
+      color: var(--ink-mid);
+      font-weight: 300;
+    }
+ 
+    /* ============================================================
+       EXPERIENCE
+    ============================================================ */
+    .experience {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+ 
+    /* Job block */
+    .job {
+      margin-bottom: 2.2rem;
+    }
+ 
+    .job:last-child {
+      margin-bottom: 0;
+    }
+ 
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.2rem;
+    }
+ 
+    .job-company {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+ 
+    .job-dates {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+ 
+    .job-role {
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--clay);
+      font-style: italic;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.01em;
+    }
+ 
+    .job-context {
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: var(--ink-mid);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+ 
+    /* Project within a job */
+    .project {
+      margin-bottom: 1.1rem;
+    }
+ 
+    .project-name {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+ 
+    .project-name::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--clay);
+      flex-shrink: 0;
+    }
+ 
+    .project-client-tag {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      background: var(--clay-light);
+      padding: 0.1rem 0.4rem;
+      border-radius: 2px;
+      letter-spacing: 0.04em;
+    }
+ 
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+ 
+    ul.bullets li {
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: var(--ink-mid);
+      font-weight: 300;
+      padding-left: 1.1rem;
+      position: relative;
+      margin-bottom: 0.35rem;
+    }
+ 
+    ul.bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--rule);
+      font-size: 0.7rem;
+      top: 0.05em;
+    }
+ 
+    /* ============================================================
+       EDUCATION
+    ============================================================ */
+    .education {
+      margin-bottom: 0;
+    }
+ 
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+ 
+    .edu-institution {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+ 
+    .edu-dates {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      letter-spacing: 0.04em;
+    }
+ 
+    .edu-qual {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--clay);
+      font-style: italic;
+      margin-top: 0.15rem;
+      margin-bottom: 0.4rem;
+    }
+ 
+    .edu-detail {
+      font-size: 0.8rem;
+      line-height: 1.65;
+      color: var(--ink-mid);
+      font-weight: 300;
+    }
+ 
+    /* ============================================================
+       PRINT BUTTON (screen only)
+    ============================================================ */
+    .print-bar {
+      max-width: var(--page-w);
+      margin: 1.5rem auto 0;
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+    }
+ 
+    .btn {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.2rem;
+      border: 1px solid var(--clay);
+      background: transparent;
+      color: var(--clay);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      text-decoration: none;
+      display: inline-block;
+    }
+ 
+    .btn:hover, .btn-fill {
+      background: var(--clay);
+      color: var(--bone);
+    }
+ 
+    /* ============================================================
+       PRINT STYLES
+    ============================================================ */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+ 
+      body {
+        background: white;
+        padding: 0;
+      }
+ 
+      .page {
+        max-width: none;
+        width: 100%;
+        padding: 2.2cm 2.5cm;
+        box-shadow: none;
+      }
+ 
+      .page::before {
+        display: none;
+      }
+ 
+      .print-bar {
+        display: none;
+      }
+ 
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+ 
+    /* ============================================================
+       LOAD ANIMATION
+    ============================================================ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+ 
+    .page {
+      animation: fadeUp 0.5s ease both;
+    }
+ 
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 640px) {
+      .page {
+        padding: 2rem 1.5rem;
+      }
+ 
+      .cv-header {
+        grid-template-columns: 1fr;
+      }
+ 
+      .cv-contact {
+        text-align: left;
+      }
+ 
+      .cv-name {
+        font-size: 2.1rem;
+      }
+ 
+      .cap-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="paper-surface"></div>
-
-    <div class="cv-container">
-        <!-- Header Section -->
-        <div class="cv-header">
-            <h1 class="cv-name">Anas Ahammed</h1>
-            <div class="cv-title">Technical Marketing Lead | Growth Automation & Content Strategy</div>
-            <div class="cv-contact">
-                Newtown, Sydney, NSW | 0451 298 483 | anasmoin@gmail.com
-            </div>
-            <div class="cv-summary">
-                Technical marketer with 7+ years driving measurable growth through data-driven campaigns and marketing automation. Built AI-powered content platform reducing production time 90%, generated 500K+ content views, and executed B2B campaigns delivering conversions worth $100,000+ with 3% click through rate. Technical edge: can code for web and scripting (HTML/CSS/JS), build dashboards (Looker Studio, Retool, Power BI), and integrate AI tools (Gemini, Imagen). Proven across FMCG, hardware, and food service brands including Nespresso, Evergreen Garden Care, Unilever, PPG, and Craveable Brands.
-            </div>
+ 
+  <!-- Print / Save bar -->
+  <div class="print-bar">
+    <a href="index.html" class="btn">← Back to site</a>
+    <button class="btn btn-fill" onclick="window.print()">Save as PDF</button>
+  </div>
+ 
+  <div class="page">
+ 
+    <!-- ── HEADER ── -->
+    <header class="cv-header">
+      <div>
+        <h1 class="cv-name">Anas Ahammed</h1>
+        <p class="cv-title">AI Builder &amp; Adoption Specialist</p>
+      </div>
+      <div class="cv-contact">
+        Newtown, Sydney NSW<br>
+        <a href="tel:0451298483">0451 298 483</a><br>
+        <a href="mailto:anasmoin@gmail.com">anasmoin@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/anas-ahammed-4787b8144/" target="_blank">Linkedin Profile</a>
+        <a href="https://anasmoin1996.github.io/Portfolio/" target="_blank">Portfolio</a>
+      </div>
+    </header>
+ 
+    <!-- ── SUMMARY ── -->
+    <p class="cv-summary">
+      <strong>Technical enough to build. Commercial enough to know when not to.</strong>
+      I work with small to medium businesses and mid-market teams to find where AI creates real leverage,
+      then build the tools, workflows, and internal capability to make it work. Three recent freelance
+      engagements across healthcare, property, and franchise operations, each delivering measurable
+      commercial outcomes. Seven and a half prior years at a SaaS company managing enterprise
+      client relationships (PPG Paints, Nespresso, Unilever Food Solutions) and shipping an AI-driven
+      marketing platform that cut production time by 90%.
+    </p>
+ 
+    <!-- ── CAPABILITIES ── -->
+    <section class="capabilities">
+      <div class="section-label">Core capabilities</div>
+      <div class="cap-grid">
+        <div class="cap-item">
+          <span class="cap-label">AI &amp; automation</span>
+          <span class="cap-value">Claude ecosystem (Opus / Sonnet / Cowork / Code), Google Gemini, Imagen, Document AI, MCP integrations, agentic workflow design, prompt library development, RAG pipelines, voice interfaces</span>
         </div>
-
-        <!-- Capabilities Section -->
-        <h2 class="cv-section-title">Core Capabilities</h2>
-        <div class="cv-section-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-            <div>
-                <strong>Campaign Strategy & Execution</strong>
-                <ul class="cv-list">
-                    <li>Multi-channel marketing (LinkedIn, email, SMS, social), lead generation, retail campaigns</li>
-                    <li>Content ecosystems generating 500,000+ views, three-tier framework for always-on content</li>
-                    <li>Campaign analytics, ROI tracking, attribution modeling</li>
-                </ul>
-                
-                <strong>Marketing Technology</strong>
-                <ul class="cv-list">
-                    <li>AI Content Automation: Built platform using Gemini AI + Imagen 3 for automated landing page creation</li>
-                    <li>Coding Skills: HTML/CSS/JavaScript for rapid campaign customization and analytics</li>
-                    <li>Marketing Tools: Retool admin panels, Google Analytics, Looker Studio and Power BI for data visualisation</li>
-                    <li>CMS Platforms: Wix, Webflow, Squarespace, custom HTML</li>
-                </ul>
-            </div>
-            <div>
-                <strong>Content Production</strong>
-                <ul class="cv-list">
-                    <li>Video production (filming, editing: Adobe Premiere, After Effects), scriptwriting, infographics</li>
-                    <li>Adobe Creative Suite (Photoshop, InDesign, Illustrator), mobile-first design</li>
-                    <li>Technical translation: Turning Complex topics into accessible content</li>
-                </ul>
-
-                <strong>Client Management</strong>
-                <ul class="cv-list">
-                    <li>Onboarding & training groups up to 50, workshop facilitation, demo content creation</li>
-                    <li>Trade show activations, field staff support, performance reporting</li>
-                </ul>
-            </div>
+        <div class="cap-item">
+          <span class="cap-label">Consulting &amp; adoption</span>
+          <span class="cap-value">AI readiness audits, process documentation, workshop facilitation, change management, service packaging, stakeholder management, enterprise account management</span>
         </div>
-
-        <!-- Professional Experience Section -->
-        <h2 class="cv-section-title">Professional Experience</h2>
-        <div class="cv-section-content">
-            
-            <!-- Pitch Pocket -->
-            <div class="cv-job">
-                <div class="cv-job-header">
-                    <h3 class="cv-company">Pitch Pocket, Sydney</h3>
-                    <span class="cv-date">Feb 2018 - Oct 2025</span>
-                </div>
-                <div class="cv-role">Technical Marketing Lead & Multimedia Specialist</div>
-                
-                <p><strong>Key Marketing Achievements:</strong></p>
-                
-                <div class="cv-project-title">LinkedIn B2B Campaign</div>
-                <ul class="cv-list">
-                    <li>Developed LinkedIn campaign targeting food service/professional services</li>
-                    <li>10,000+ impressions, 300+ click throughs, 20 high value customers converted ($100,000 in revenue)</li>
-                    <li>Micro-budget campaign proving scalable B2B lead generation model</li>
-                </ul>
-
-                <div class="cv-project-title">AI Marketing Automation Platform</div>
-                <ul class="cv-list">
-                    <li>Built AI-powered platform using Google Gemini + Imagen for image generation reducing landing page production from days to minutes</li>
-                    <li>Technical stack: Vue.js 3, Firebase, AI integration via API</li>
-                    <li>Impact: 90% time reduction, eliminated designer bottleneck, enabled client self-service</li>
-                </ul>
-
-                <div class="cv-project-title">Content Ecosystem</div>
-                <ul class="cv-list">
-                    <li>Designed three-tier content framework: Foundation (quick reels, infographics), Engagement (animated, dynamic content), Deep-dive (repurposable long-form video content)</li>
-                    <li>Achieved 500,000+ views across training and marketing content</li>
-                    <li>Content used in 8000+ training sessions (Bunnings, hardware stores AU/NZ)</li>
-                </ul>
-
-                <div class="cv-project-title">Marketing Template Systems</div>
-                <ul class="cv-list">
-                    <li>Created PowerPoint briefing templates for faster briefing than written documents</li>
-                    <li>Reduced revision cycles significantly for enterprise clients (Nespresso, Pringles, Evergreen)</li>
-                    <li>Established repeatable content creation process saving time</li>
-                </ul>
-
-                <div class="cv-project-title">Product Launch Campaigns</div>
-                <ul class="cv-list">
-                    <li>Nespresso coffee machines, Skrewball Whiskey, Osmocote, Roundup: Led below the line campaigns, retail training materials, email marketing content</li>
-                    <li>Adapted brand messaging for consumer segments, created field activation materials</li>
-                </ul>
-
-                <p><strong>Campaign Execution & Operations:</strong></p>
-
-                <div class="cv-project-title">Marketing Technology & Automation</div>
-                <ul class="cv-list">
-                    <li>Built admin panel automating campaign operations for 1000+ users</li>
-                    <li>Created real-time dashboards integrating Firebase data + Google Analytics for performance tracking</li>
-                    <li>Integrated AI content generation into marketing workflow</li>
-                </ul>
-
-                <div class="cv-project-title">Content Production at Scale</div>
-                <ul class="cv-list">
-                    <li>Wrote scripts translating complex topics (OH&S, technical products) into 30-90s videos and infographics</li>
-                    <li>End-to-end video production: filming, lighting, audio, editing</li>
-                    <li>Managed digital asset libraries for content reusability across campaigns</li>
-                </ul>
-
-                <div class="cv-project-title">Technical Translation</div>
-                <ul class="cv-list">
-                    <li>Craveable Brands: Key OH&S compliance topics turned into infographics for franchise staff</li>
-                    <li>Evergreen Garden Care: Technical lawn care science turned into visual training materials for national hardware retail staff</li>
-                    <li>Simplified complex information enabling staff knowledge and customer guidance</li>
-                </ul>
-
-                <div class="cv-project-title">Client Management & Training</div>
-                <ul class="cv-list">
-                    <li>Onboarded clients from PPG, Brushware, Nespresso, Unilever Food Solutions</li>
-                    <li>Led live and virtual training sessions for groups up to 50, created demo content</li>
-                    <li>Supported trade show activations, optimized tools based on field feedback</li>
-                </ul>
-
-                <div class="cv-project-title">Cross-Functional Collaboration</div>
-                <ul class="cv-list">
-                    <li>Liaised between technical teams and marketing leadership</li>
-                    <li>Developed business requirement documents aligning marketing with technical capabilities</li>
-                    <li>Facilitated workshops with brand managers and L&D teams</li>
-                </ul>
-            </div>
-
-            <!-- Freelance -->
-            <div class="cv-job">
-                <div class="cv-job-header">
-                    <h3 class="cv-company">Freelance Marketing Projects</h3>
-                    <span class="cv-date">Oct 2025 - Present</span>
-                </div>
-                <ul class="cv-list">
-                    <li>Developed a blood report dashboard capable of reliably ingesting laboratory results and presenting them in a clear, elegant, and easily understandable format.</li>
-                    <li>Exploring AI-enhanced marketing automation opportunities.</li>
-                    <li>Deepening expertise in AI tools (prompt engineering, managing context windows effectively).</li>
-                </ul>
-            </div>
-
+        <div class="cap-item">
+          <span class="cap-label">Build</span>
+          <span class="cap-value">Vue.js 3, Firebase (Auth, Firestore, Cloud Functions), Python, FastAPI, Sharetribe, Postmark, HubSpot CRM, Stripe, Retool, Wix / Webflow, custom HTML / CSS / JS</span>
         </div>
-
-        <!-- Education Section -->
-        <h2 class="cv-section-title">Education</h2>
-        <div class="cv-section-content">
-            <div class="cv-job-header" style="margin-bottom: 0;">
-                <h3 class="cv-company">University of Sydney</h3>
-                <span class="cv-date">2015 - 2018</span>
-            </div>
-            <div class="cv-role" style="font-size: 1rem; color: var(--charcoal); margin-bottom: 0.5rem;">Bachelor of Commerce (Marketing & Business Information Systems)</div>
-            <p style="margin-top: 0.5rem; line-height: 1.5; font-size: 0.95rem;">
-                <strong>Relevant coursework:</strong> Marketing strategy, consumer behavior, database management, business analytics, digital marketing. Combined strategic marketing foundations with technical systems understanding.
-            </p>
+        <div class="cap-item">
+          <span class="cap-label">Data &amp; analytics</span>
+          <span class="cap-value">Real-time dashboards (Looker Studio, Retool, Firebase), Google Analytics, data extraction and pipeline design, campaign reporting and attribution</span>
         </div>
-    </div>
-
-    <!-- Actions block: only visible on screen -->
-    <div class="floating-actions">
-        <div style="background: white; padding: 1rem; border: 3px solid var(--charcoal); box-shadow: 6px 6px 0 var(--charcoal); font-size: 0.85rem; max-width: 250px; margin-bottom: 1rem;">
-            <strong>To save as PDF:</strong><br><br>
-            • Click the "Save as PDF" button<br>
-            • On <strong>Mac/Safari:</strong> Click the "PDF" dropdown at the bottom of the print dialog and choose "Save as PDF".<br>
-            • On <strong>Chrome:</strong> Change Destination to "Save as PDF".
+        <div class="cap-item">
+          <span class="cap-label">Content &amp; design</span>
+          <span class="cap-value">Adobe Creative Suite, video production (Premiere, After Effects), technical translation, mobile-first design, infographics, Canva, CapCut</span>
         </div>
-        <button class="btn-print" onclick="window.print()">Save as PDF</button>
-        <a href="index.html" class="btn-back">Back to Site</a>
-    </div>
+      </div>
+    </section>
+ 
+    <!-- ── EXPERIENCE ── -->
+    <section class="experience">
+      <div class="section-label">Experience</div>
+ 
+      <!-- Freelance -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Independent AI Adoption Consultant</span>
+          <span class="job-dates">Jan 2026 — present</span>
+        </div>
+        <p class="job-role">Freelance · Sydney &amp; regional NSW</p>
+        <p class="job-context">
+          Embed directly with SMB teams to map workflows, identify where AI creates commercial leverage,
+          and build solutions with human-in-the-loop automation design where trust matters. Client names withheld;
+          references available on request.
+        </p>
+ 
+        <div class="project">
+          <p class="project-name">
+            Sydney health &amp; beauty clinic
+            <span class="project-client-tag">200+ patients / month</span>
+          </p>
+          <ul class="bullets">
+            <li>Architected a compliance-grade blood-test processing pipeline (Google Document AI + LLM-backed sense-checking), reducing a 2-hour manual consultation task to an approval-only workflow.</li>
+            <li>Built a practitioner approval gate from day one to meet Australian health data regulations; pressure-tested the extraction pipeline against 200+ real lab reports before launch.</li>
+            <li>Over 300 branded reports processed since go-live, zero compliance incidents; clinic now scoping a phase two patient-facing dashboard.</li>
+          </ul>
+        </div>
+ 
+        <div class="project">
+          <p class="project-name">
+            Maintenance services franchise network
+            <span class="project-client-tag">4 franchises</span>
+          </p>
+          <ul class="bullets">
+            <li>Redesigned the unfulfilled job workflow to recover an estimated $6,000/month in lead fees previously lost to a manual 2-hour assignment window.</li>
+            <li>Built email-to-marketplace automation (Postmark inbound → LLM job description → Sharetribe listing) with promotional framework and contractor onboarding; chose Sharetribe to inherit mature auth, payments, and security infrastructure rather than build from scratch.</li>
+            <li>4-week build, currently in final Stripe integration and multi-user testing before launch.</li>
+          </ul>
+        </div>
+ 
+        <div class="project">
+          <p class="project-name">
+            Regional NSW real estate agency
+            <span class="project-client-tag">25-year business</span>
+          </p>
+          <ul class="bullets">
+            <li>Shifted a traditionally-minded, AI-skeptical team from "hire a developer" to a scoped AI-supported digital strategy across 2–3 working sessions, using live prototyping in Gemini Canvas to demonstrate rather than explain.</li>
+            <li>Delivered a branding guide, website specification, developer brief (enabling competitive quotes), and a custom prompt library for social content generation via Google Gems.</li>
+            <li>Deliberately recommended against AI for the website build itself, aligning with the client's concerns about ongoing maintenance, the right call for them.</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <!-- Pitchpocket -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Pitchpocket</span>
+          <span class="job-dates">Feb 2018 — Oct 2025</span>
+        </div>
+        <p class="job-role">Technical Marketing Lead &amp; Multimedia Specialist · Sydney</p>
+        <p class="job-context">
+          Enterprise client-facing role at a micro-SaaS startup. Ran the full account stack, pitch,
+          onboarding, requirements mapping, content delivery, analytics reporting for clients including
+          PPG Paints, Nespresso, Unilever Food Solutions, Evergreen Garden Care, Pringles, and
+          Australian Homeware Enterprises.
+        </p>
+ 
+        <div class="project">
+          <p class="project-name">Stakaroo — AI landing page platform</p>
+          <ul class="bullets">
+            <li>Designed and built a self-service SaaS platform (Vue.js 3 + Firebase + Gemini + Imagen 3) enabling clients to generate, customise, and host branded landing pages in minutes rather than days.</li>
+            <li>Cut campaign production time by approximately 90% and eliminated the designer-developer bottleneck that had been capping business scale.</li>
+            <li>Shipped solo; built a specification-first workflow (product manifesto enforced via system prompts) to keep an AI coding agent accountable across the full project. Codebase retained for independent relaunch.</li>
+          </ul>
+        </div>
+ 
+        <div class="project">
+          <p class="project-name">PPG Paints — year-long in-aisle training programme</p>
+          <ul class="bullets">
+            <li>Partnered with PPG's L&amp;D team to design a micro-learning programme for Bunnings retail staff: 5-minute, in-aisle, mobile-first sessions replacing traditional off-floor training.</li>
+            <li>Delivered 8,000+ training sessions across Australia and New Zealand covering 10+ products, with real-time national visibility of training activity for the brand.</li>
+            <li>Built a PowerPoint-based briefing template so the client could brief new modules themselves, shortening revision cycles from weeks to days and making the programme sustainable long-term.</li>
+          </ul>
+        </div>
+ 
+        <div class="project">
+          <p class="project-name">Internal tooling &amp; analytics</p>
+          <ul class="bullets">
+            <li>Built a Retool + Firebase admin panel automating user management for 1,000+ users across enterprise clients, replacing a brittle manual process.</li>
+            <li>Designed real-time campaign dashboards integrating Firebase, Google Analytics, and field data from ground staff during Skrewball Whiskey, Nespresso, and Hellmann's activations, saving weeks of end-of-campaign reporting.</li>
+          </ul>
+        </div>
+ 
+        <div class="project">
+          <p class="project-name">Across all enterprise clients</p>
+          <ul class="bullets">
+            <li>Gave abstract ideas a physical shape in the room — when leadership was throwing loose thoughts around, I'd come back with a presentation, mockup, or prototype with real edges that people could critique and build on.</li>
+            <li>Built sales enablement materials (decks, video, infographics, email sequences), ran LinkedIn B2B campaigns that converted $100k+ in revenue on a micro-budget, and built data pipelines for field activation staff.</li>
+            <li>Onboarded enterprise clients, ran live and virtual training sessions for groups up to 50, and did site visits to watch staff actually use the product, the step most vendors skip.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ── EDUCATION ── -->
+    <section class="education">
+      <div class="section-label">Education</div>
+      <div class="edu-row">
+        <span class="edu-institution">University of Sydney</span>
+        <span class="edu-dates">2015 — 2018</span>
+      </div>
+      <p class="edu-qual">Bachelor of Commerce, Majoring in Marketing &amp; Business Information Systems</p>
+      <p class="edu-detail">Coursework spanning consumer behaviour, digital marketing, database management, business analytics, and systems analysis. Marketing strategy fundamentals combined with technical systems thinking.</p>
+    </section>
+ 
+  </div><!-- /page -->
+ 
 </body>
 </html>
