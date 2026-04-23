@@ -1038,17 +1038,7 @@ section {
 }
 
 .exp-entry::before {
-    content: '';
-    position: absolute;
-    left: 130px;
-    top: 6px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--accent-mid);
-    border: 2px solid var(--surface);
-    box-shadow: 0 0 0 2px var(--accent-mid);
-    transform: translateX(-50%);
+    display: none;
 }
 
 .exp-dates {
@@ -1059,7 +1049,7 @@ section {
     text-align: right;
 }
 
-.exp-content { padding-left: 1.5rem; }
+.exp-content { padding-left: 2.5rem; }
 
 .exp-role {
     font-size: var(--text-base);
@@ -1087,10 +1077,10 @@ section {
     background: var(--accent-light);
     border: 1px solid rgba(47, 107, 107, 0.15);
     border-radius: var(--radius-lg);
-    padding: 1.5rem;
+    padding: 2rem;
     margin-top: 2rem;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: start;
 }
 
