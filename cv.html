@@ -391,16 +391,30 @@
         margin: 0;
       }
  
-      body {
-        background: white;
-        padding: 0;
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
       }
  
+      html, body {
+        background: #e8e4dc !important;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+ 
+      /* Each "printed page" wrapper fills the full A4 sheet */
       .page {
         max-width: none;
         width: 100%;
+        min-height: 100vh;
         padding: 2.2cm 2.5cm;
         box-shadow: none;
+        background: var(--bone) !important;
+        /* Give the bone card a margin so the dark surround shows */
+        margin: 0 1.2cm;
+        width: calc(100% - 2.4cm);
+        box-sizing: border-box;
       }
  
       .page::before {
@@ -409,11 +423,6 @@
  
       .print-bar {
         display: none;
-      }
- 
-      * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
       }
     }
  
@@ -475,8 +484,8 @@
         Newtown, Sydney NSW<br>
         <a href="tel:0451298483">0451 298 483</a><br>
         <a href="mailto:anasmoin@gmail.com">anasmoin@gmail.com</a><br>
-        <a href="https://www.linkedin.com/in/anas-ahammed-4787b8144/" target="_blank">Linkedin Profile</a>
-        <a href="https://anasmoin1996.github.io/Portfolio/" target="_blank">Portfolio</a>
+        <a href="https://www.linkedin.com/in/anas-ahammed-4787b8144/" target="_blank">Linkedin profile</a><br>
+        <a href="https://anasmoin1996.github.io/Portfolio/" target="_blank">Portfolio website</a>
       </div>
     </header>
  
@@ -519,7 +528,7 @@
     </section>
  
     <!-- ── EXPERIENCE ── -->
-    <section class="experience">
+    <section class="experience" style="break-before: page; -webkit-column-break-before: page; page-break-before: always;">
       <div class="section-label">Experience</div>
  
       <!-- Freelance -->
